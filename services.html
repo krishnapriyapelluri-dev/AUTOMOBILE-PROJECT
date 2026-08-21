@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Showroom Services, Car Finance & EMI Loan Calculator | Krishna Priya Automobiles Jubilee Hills Hyderabad">
+  <title>Services, Car Finance & EMI Calculator | Krishna Priya Automobiles</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+  <!-- Preloader -->
+  <div class="preloader" id="preloader">
+    <div class="preloader-spinner">
+      <div class="spinner-ring"></div>
+      <span class="preloader-text">Krishna Priya Automobiles</span>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-icon">🏎️</span>
+        <div class="logo-text">
+          <span class="logo-name">Krishna Priya</span>
+          <span class="logo-tagline">AUTOMOBILES</span>
+        </div>
+      </a>
+      <nav class="nav-menu" id="navMenu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="vehicles.html" class="nav-link">Vehicles</a>
+        <a href="configurator.html" class="nav-link">3D Studio</a>
+        <a href="compare.html" class="nav-link">Compare</a>
+        <a href="offers.html" class="nav-link">Festive Offers</a>
+        <a href="tradein.html" class="nav-link">Trade-In</a>
+        <a href="services.html" class="nav-link active">Services & EMI</a>
+        <a href="vip-lounge.html" class="nav-link">VIP Lounge</a>
+        <a href="testimonials.html" class="nav-link">Stories</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+        </button>
+        <a href="contact.html" class="btn btn-primary nav-cta">Book Service</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main style="padding-top: 5.5rem;">
+    <!-- Services Banner -->
+    <section class="section" style="padding-bottom: 2rem;">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge-360" style="color:var(--clr-gold);">FULL AUTOMOTIVE CARE</span>
+          <h1 class="section-title">Automotive Services & Finance Solutions</h1>
+          <p class="section-subtitle">Comprehensive care, 150-point diagnostic inspections, 9H Ceramic coating, and transparent car financing in Jubilee Hills, Hyderabad</p>
+        </div>
+
+        <div class="grid grid-4">
+          <div class="card" style="padding:1.75rem; text-align:center;">
+            <div style="font-size:3rem; margin-bottom:1rem;">🛠️</div>
+            <h3 style="font-size:1.25rem; margin-bottom:0.5rem;">Periodic Maintenance</h3>
+            <p style="color:var(--clr-text-muted); font-size:0.88rem;">Computerized OBD engine diagnostics, synthetic oil replacement, and laser wheel alignment using 100% genuine factory parts.</p>
+          </div>
+
+          <div class="card" style="padding:1.75rem; text-align:center;">
+            <div style="font-size:3rem; margin-bottom:1rem;">✨</div>
+            <h3 style="font-size:1.25rem; margin-bottom:0.5rem;">9H Ceramic & PPF Coating</h3>
+            <p style="color:var(--clr-text-muted); font-size:0.88rem;">German paint protection technology providing high-gloss hydrophobic mirror finish, UV defense, and scratch resistance.</p>
+          </div>
+
+          <div class="card" style="padding:1.75rem; text-align:center;">
+            <div style="font-size:3rem; margin-bottom:1rem;">📋</div>
+            <h3 style="font-size:1.25rem; margin-bottom:0.5rem;">Cashless Insurance</h3>
+            <p style="color:var(--clr-text-muted); font-size:0.88rem;">Hassle-free claim processing tied up with top national insurance providers with zero upfront cash or paperwork delay.</p>
+          </div>
+
+          <div class="card" style="padding:1.75rem; text-align:center;">
+            <div style="font-size:3rem; margin-bottom:1rem;">💰</div>
+            <h3 style="font-size:1.25rem; margin-bottom:0.5rem;">Pre-Approved Loans</h3>
+            <p style="color:var(--clr-text-muted); font-size:0.88rem;">Custom finance structures with lowest interest rates starting from 7.99% per annum and same-day instant disbursal.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EMI Calculator Section -->
+    <section class="section bg-alt" id="emiCalc">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge-360" style="color:var(--clr-gold);">TRANSPARENT FINANCING</span>
+          <h2 class="section-title">Interactive EMI & Finance Calculator</h2>
+          <p class="section-subtitle">Select a vehicle from our inventory or customize pricing to calculate your monthly installment schedule</p>
+        </div>
+
+        <div class="calculator-card">
+          <div class="calc-grid">
+            <div>
+              <div class="filter-group" style="margin-bottom: 1.5rem;">
+                <label class="filter-label">Select Showroom Vehicle (Auto-Fills Price)</label>
+                <select id="emiVehicleSelect" class="filter-select">
+                  <option value="">Custom Vehicle Price</option>
+                </select>
+              </div>
+
+              <div class="slider-group">
+                <div class="slider-header">
+                  <span>Vehicle Ex-Showroom Price</span>
+                  <span class="slider-val" id="emiPriceVal">₹12,50,000</span>
+                </div>
+                <input type="range" id="emiPrice" class="range-slider" min="300000" max="6500000" step="50000" value="1250000">
+              </div>
+
+              <div class="slider-group">
+                <div class="slider-header">
+                  <span>Down Payment Amount (<span id="emiDownPercentVal">20%</span>)</span>
+                  <span class="slider-val" id="emiDownVal">₹2,50,000</span>
+                </div>
+                <input type="range" id="emiDown" class="range-slider" min="50000" max="3000000" step="25000" value="250000">
+                <input type="range" id="emiDownPercent" class="range-slider" min="10" max="80" step="5" value="20" style="margin-top:0.5rem;">
+              </div>
+
+              <div class="slider-group">
+                <div class="slider-header">
+                  <span>Interest Rate (% P.A.)</span>
+                  <span class="slider-val" id="emiRateVal">8.5%</span>
+                </div>
+                <input type="range" id="emiRate" class="range-slider" min="6.5" max="15" step="0.25" value="8.5">
+              </div>
+
+              <div class="slider-group">
+                <div class="slider-header">
+                  <span>Loan Tenure</span>
+                  <span class="slider-val" id="emiTenureVal">5.0 Years (60 Months)</span>
+                </div>
+                <input type="range" id="emiTenure" class="range-slider" min="12" max="84" step="12" value="60">
+              </div>
+            </div>
+
+            <div>
+              <div class="calc-result-box">
+                <span style="font-size:0.85rem; text-transform:uppercase; letter-spacing:0.05em; color:var(--clr-text-muted); font-weight:700;">Monthly Payable EMI</span>
+                <div class="emi-amount-badge" id="emiAmount">₹20,935</div>
+
+                <div class="donut-chart-container" id="emiDonut">
+                  <div class="donut-inner">Principal vs Interest</div>
+                </div>
+
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem; font-size:0.88rem; text-align:left; border-top:1px solid var(--clr-border); padding-top:1rem;">
+                  <div>
+                    <span style="color:var(--clr-text-muted); display:block;">Loan Amount:</span>
+                    <strong id="emiLoanAmt">₹10,00,000</strong>
+                  </div>
+                  <div>
+                    <span style="color:var(--clr-text-muted); display:block;">Total Interest:</span>
+                    <strong id="emiTotalInterest" style="color:var(--clr-gold);">₹2,56,100</strong>
+                  </div>
+                  <div style="grid-column: span 2;">
+                    <span style="color:var(--clr-text-muted); display:block;">Total Payable Amount:</span>
+                    <strong id="emiTotalPayment" style="font-size:1.1rem; color:var(--clr-blue);">₹12,56,100</strong>
+                  </div>
+                </div>
+
+                <a href="contact.html?loan=apply" class="btn btn-gold" style="width:100%; margin-top:1.5rem;">Apply Pre-Approved Car Loan</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Amortization Schedule Table -->
+          <div style="margin-top:3rem;">
+            <h3 style="font-size:1.3rem; margin-bottom:1rem;">Yearly Loan Repayment Amortization Schedule</h3>
+            <div style="overflow-x:auto;">
+              <table class="compare-table">
+                <thead>
+                  <tr>
+                    <th>Year</th>
+                    <th>Principal Repaid</th>
+                    <th>Interest Paid</th>
+                    <th>Remaining Balance</th>
+                  </tr>
+                </thead>
+                <tbody id="amortizationTableBody"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trade-In Old Car Valuation Section -->
+    <section class="section">
+      <div class="container">
+        <div class="grid grid-2" style="align-items:center; gap:3rem;">
+          <div>
+            <span class="badge-360" style="color:var(--clr-gold);">CAR EXCHANGE PROGRAM</span>
+            <h2 style="font-size:clamp(2rem, 3.5vw, 2.75rem); margin: 0.5rem 0 1rem;">Instant Car Exchange & Valuation</h2>
+            <p style="color:var(--clr-text-muted); font-size:1.05rem; line-height:1.7; margin-bottom:1.5rem;">
+              Trade in your old vehicle for a new SUV, sedan, or electric car. Receive maximum market value evaluation + <strong>₹60,000 Exchange Bonus</strong> with zero paperwork stress.
+            </p>
+            <ul style="display:flex; flex-direction:column; gap:0.75rem; color:var(--clr-text); font-weight:500;">
+              <li>✓ Free Doorstep Car Evaluation in Hyderabad</li>
+              <li>✓ Instant RC Transfer & Legal Clearance</li>
+              <li>✓ Same-day Bank Transfer or Down Payment Adjustment</li>
+            </ul>
+          </div>
+
+          <div class="card" style="padding:2rem;">
+            <h3 style="font-size:1.35rem; margin-bottom:1.25rem;">Estimate Old Car Trade-In Value</h3>
+            <form id="tradeInForm">
+              <div style="margin-bottom:1rem;">
+                <label style="display:block; font-size:0.85rem; font-weight:600; margin-bottom:0.3rem;">Manufacturing Year</label>
+                <select id="tiYear" class="filter-select" required>
+                  <option value="2022">2022</option>
+                  <option value="2021">2021</option>
+                  <option value="2020">2020</option>
+                  <option value="2019">2019</option>
+                  <option value="2018" selected>2018</option>
+                  <option value="2017">2017</option>
+                </select>
+              </div>
+
+              <div style="margin-bottom:1rem;">
+                <label style="display:block; font-size:0.85rem; font-weight:600; margin-bottom:0.3rem;">Car Brand</label>
+                <select id="tiBrand" class="filter-select" required>
+                  <option value="Maruti Suzuki">Maruti Suzuki</option>
+                  <option value="Hyundai">Hyundai</option>
+                  <option value="Tata">Tata</option>
+                  <option value="Mahindra">Mahindra</option>
+                  <option value="Honda">Honda</option>
+                  <option value="Toyota">Toyota</option>
+                </select>
+              </div>
+
+              <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-bottom:1.5rem;">
+                <div>
+                  <label style="display:block; font-size:0.85rem; font-weight:600; margin-bottom:0.3rem;">KM Driven</label>
+                  <input type="number" id="tiKm" class="filter-input" placeholder="e.g. 45000" value="45000" required>
+                </div>
+                <div>
+                  <label style="display:block; font-size:0.85rem; font-weight:600; margin-bottom:0.3rem;">Vehicle Condition</label>
+                  <select id="tiCondition" class="filter-select" required>
+                    <option value="Excellent">Excellent</option>
+                    <option value="Good" selected>Good</option>
+                    <option value="Fair">Fair</option>
+                  </select>
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn-gold" style="width:100%;">Calculate Trade-In Value</button>
+            </form>
+
+            <div id="tradeInResult" style="display:none;"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Floating WhatsApp Widget -->
+  <div class="wa-widget">
+    <div class="wa-fab" id="waFabToggle">
+      💬
+      <span class="wa-badge-pulse"></span>
+    </div>
+    <div class="wa-chat-card" id="waChatCard">
+      <div class="wa-chat-header">
+        <div>
+          <div class="wa-chat-header-title">Krishna Priya Finance Desk</div>
+          <div class="wa-chat-header-sub"><span class="online-dot"></span> Online | Instant loan support</div>
+        </div>
+        <span style="cursor:pointer; font-size:1.4rem;" id="waChatClose">&times;</span>
+      </div>
+      <div class="wa-chat-body">
+        <div class="wa-chat-bubble">
+          👋 Have questions about car loan interest rates or trade-in valuation? Speak to our finance desk directly!
+        </div>
+        <a href="https://wa.me/919876543210?text=Hi!%20I%20have%20a%20query%20about%20car%20loans%20and%20EMI%20options." target="_blank" rel="noopener" class="wa-chat-btn">
+          <span>Chat on WhatsApp</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <footer style="background: var(--clr-surface-elevated); border-top: 1px solid var(--clr-border); padding: 3rem 0; text-align: center; font-size:0.9rem; color: var(--clr-text-muted);">
+    <div class="container">
+      <p>© 2026 Krishna Priya Automobiles. Jubilee Hills, Hyderabad.</p>
+    </div>
+  </footer>
+  <script src="js/vehicle_images.js"></script>
+  <script src="js/vehicles.js"></script>
+  <script src="js/calculator.js"></script>
+  <script src="js/faq.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/assistant.js"></script>
+</body>
+</html>

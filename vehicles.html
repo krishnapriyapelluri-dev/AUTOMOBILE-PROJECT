@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore Luxury Vehicles | Krishna Priya Automobiles Hyderabad - Search, multi-filter, compare side-by-side, and test drive luxury SUVs, Sedans, EVs, and MPVs.">
+  <title>Vehicle Inventory & Search | Krishna Priya Automobiles</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+  <!-- Preloader -->
+  <div class="preloader" id="preloader">
+    <div class="preloader-spinner">
+      <div class="spinner-ring"></div>
+      <span class="preloader-text">Krishna Priya Automobiles</span>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-icon">🏎️</span>
+        <div class="logo-text">
+          <span class="logo-name">Krishna Priya</span>
+          <span class="logo-tagline">AUTOMOBILES</span>
+        </div>
+      </a>
+      <nav class="nav-menu" id="navMenu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="vehicles.html" class="nav-link active">Vehicles</a>
+        <a href="configurator.html" class="nav-link">3D Studio</a>
+        <a href="compare.html" class="nav-link">Compare</a>
+        <a href="offers.html" class="nav-link">Festive Offers</a>
+        <a href="tradein.html" class="nav-link">Trade-In</a>
+        <a href="services.html" class="nav-link">Services & EMI</a>
+        <a href="vip-lounge.html" class="nav-link">VIP Lounge</a>
+        <a href="testimonials.html" class="nav-link">Stories</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+        </button>
+        <a href="contact.html" class="btn btn-primary nav-cta">Book Test Drive</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main style="padding-top: 5.5rem;">
+    <section class="section" style="padding-bottom: 2rem;">
+      <div class="container">
+        <div style="margin-bottom: 1.5rem; display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:1rem;">
+          <div>
+            <span class="badge-360" style="color:var(--clr-gold);">100% INSPECTED INVENTORY</span>
+            <h1 style="font-size: clamp(2.2rem, 4vw, 3rem); margin-top: 0.25rem;">Luxury Vehicle Catalog</h1>
+            <p style="color:var(--clr-text-muted);" id="resultsCount">Showing 12 luxury vehicles</p>
+          </div>
+
+          <div style="display:flex; gap:0.6rem;">
+            <button onclick="clearAllFilters()" class="btn btn-outline btn-sm">Reset All Filters</button>
+          </div>
+        </div>
+
+        <!-- Filter & Search Toolbar -->
+        <div class="filter-toolbar">
+          <div class="filter-grid">
+            <div class="filter-group">
+              <label class="filter-label">Search Model / Keyword</label>
+              <input type="text" id="searchInput" class="filter-input" placeholder="e.g. Creta, EV, BMW, SUV...">
+            </div>
+
+            <div class="filter-group">
+              <label class="filter-label">Brand</label>
+              <select id="brandFilter" class="filter-select">
+                <option value="All">All Brands</option>
+                <option value="Hyundai">Hyundai</option>
+                <option value="Tata">Tata</option>
+                <option value="Mahindra">Mahindra</option>
+                <option value="Maruti Suzuki">Maruti Suzuki</option>
+                <option value="Honda">Honda</option>
+                <option value="Kia">Kia</option>
+                <option value="Toyota">Toyota</option>
+                <option value="BMW">BMW</option>
+              </select>
+            </div>
+
+            <div class="filter-group">
+              <label class="filter-label">Body Style</label>
+              <select id="typeFilter" class="filter-select">
+                <option value="All">All Body Types</option>
+                <option value="SUV">SUV</option>
+                <option value="Sedan">Sedan</option>
+                <option value="Hatchback">Hatchback</option>
+                <option value="MPV">MPV</option>
+              </select>
+            </div>
+
+            <div class="filter-group">
+              <label class="filter-label">Fuel Type</label>
+              <select id="fuelFilter" class="filter-select">
+                <option value="All">All Fuel Types</option>
+                <option value="Petrol">Petrol</option>
+                <option value="Diesel">Diesel</option>
+                <option value="Electric">Electric</option>
+                <option value="Hybrid">Hybrid</option>
+              </select>
+            </div>
+
+            <div class="filter-group">
+              <label class="filter-label">Transmission</label>
+              <select id="transmissionFilter" class="filter-select">
+                <option value="All">All Transmissions</option>
+                <option value="Automatic">Automatic</option>
+                <option value="Manual">Manual</option>
+                <option value="CVT">CVT</option>
+              </select>
+            </div>
+
+            <div class="filter-group">
+              <label class="filter-label">Price Bracket</label>
+              <select id="priceFilter" class="filter-select">
+                <option value="All">All Prices</option>
+                <option value="Under ₹5L">Under ₹5 Lakhs</option>
+                <option value="₹5-10L">₹5 - ₹10 Lakhs</option>
+                <option value="₹10-15L">₹10 - ₹15 Lakhs</option>
+                <option value="₹15-20L">₹15 - ₹20 Lakhs</option>
+                <option value="Above ₹20L">Above ₹20 Lakhs</option>
+              </select>
+            </div>
+
+            <div class="filter-group">
+              <label class="filter-label">Sort By</label>
+              <select id="sortFilter" class="filter-select">
+                <option value="Featured">Featured</option>
+                <option value="Price: Low to High">Price: Low to High</option>
+                <option value="Price: High to Low">Price: High to Low</option>
+                <option value="Newest First">Newest First</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Active Filter Pills Area -->
+        <div id="activeFilterPills"></div>
+
+        <!-- Inventory Grid -->
+        <div class="grid grid-3" id="vehicleGrid"></div>
+
+        <div id="noResults" style="display:none; text-align:center; padding: 4rem 1rem;">
+          <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">No vehicles matched your search filters</h3>
+          <p style="color:var(--clr-text-muted); margin-bottom:1.5rem;">Try adjusting your filter options or clearing active search keywords.</p>
+          <button onclick="clearAllFilters()" class="btn btn-primary">Reset All Filters</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Floating Vehicle Compare Drawer Tray -->
+  <div class="compare-tray" id="compareTray">
+    <div style="font-weight:700; font-size:0.9rem;">Compare Vehicles:</div>
+    <div class="compare-chips" id="compareChips"></div>
+    <button class="btn btn-gold btn-sm" id="compareNowBtn" disabled>Compare Side-by-Side</button>
+    <button class="btn btn-outline btn-sm" id="clearCompareBtn">Clear</button>
+  </div>
+
+  <!-- Comparison Matrix Modal -->
+  <div class="modal-backdrop" id="compareModal">
+    <div class="modal-container" style="max-width:1100px;">
+      <div class="modal-header">
+        <h3 class="modal-title">Vehicle Comparison Matrix</h3>
+        <span class="modal-close" id="closeCompareModal">&times;</span>
+      </div>
+      <div class="modal-body" id="compareModalBody"></div>
+    </div>
+  </div>
+
+  <!-- Vehicle Detail Modal -->
+  <div class="modal-backdrop" id="vehicleDetailModal">
+    <div class="modal-container" style="max-width: 900px;">
+      <div class="modal-header">
+        <h3 class="modal-title">Vehicle Specifications</h3>
+        <span class="modal-close" id="closeDetailModal">&times;</span>
+      </div>
+      <div class="modal-body" id="vehicleDetailBody"></div>
+    </div>
+  </div>
+
+  <!-- 360 Viewer Modal -->
+  <div class="modal-backdrop" id="modal360">
+    <div class="modal-360-container">
+      <div class="modal-360-header">
+        <div>
+          <span class="badge-360">360° INTERACTIVE VIEW</span>
+          <h3 class="modal-360-title" id="viewer360Title">Hyundai Creta 2024</h3>
+          <p class="modal-360-sub" id="viewer360Sub">Drag left/right to rotate 360° exterior view</p>
+        </div>
+        <span class="modal-360-close" id="close360Modal">&times;</span>
+      </div>
+      <div class="modal-360-view-tabs">
+        <span class="view-tab active" id="tabExterior">Exterior 360°</span>
+        <span class="view-tab" id="tabInterior">Interior Cockpit</span>
+      </div>
+      <div class="modal-360-canvas-wrap" id="canvasWrap">
+        <div class="glow-backdrop" id="glowBackdrop"></div>
+        <div class="vehicle-360-stage" id="stage360">
+          <img src="images/car_creta.jpg" alt="360 view" class="vehicle-360-img" id="img360">
+        </div>
+        <span class="canvas-angle-indicator" id="angleIndicator">0°</span>
+        <div class="drag-hint" id="dragHint"><span>↔️ Drag to Rotate 360°</span></div>
+      </div>
+      <div class="modal-360-footer">
+        <div class="color-picker-wrap">
+          <span class="color-label">Color:</span>
+          <div class="color-swatches" id="colorSwatches"></div>
+        </div>
+        <div style="display:flex; gap:0.6rem;">
+          <a href="contact.html" class="btn btn-primary btn-sm">Book Doorstep Test Drive</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating WhatsApp Widget -->
+  <div class="wa-widget">
+    <div class="wa-fab" id="waFabToggle">
+      💬
+      <span class="wa-badge-pulse"></span>
+    </div>
+    <div class="wa-chat-card" id="waChatCard">
+      <div class="wa-chat-header">
+        <div>
+          <div class="wa-chat-header-title">Krishna Priya Desk</div>
+          <div class="wa-chat-header-sub"><span class="online-dot"></span> Online | Replies instantly</div>
+        </div>
+        <span style="cursor:pointer; font-size:1.4rem;" id="waChatClose">&times;</span>
+      </div>
+      <div class="wa-chat-body">
+        <div class="wa-chat-bubble">
+          👋 Need help choosing between SUV models or comparing specs? Chat with our vehicle specialist right now!
+        </div>
+        <a href="https://wa.me/919876543210?text=Hi!%20I%20am%20browsing%20your%20car%20inventory%20and%20need%20assistance." target="_blank" rel="noopener" class="wa-chat-btn">
+          <span>Chat on WhatsApp</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer style="background: var(--clr-surface-elevated); border-top: 1px solid var(--clr-border); padding: 3rem 0; text-align: center; font-size:0.9rem; color: var(--clr-text-muted);">
+    <div class="container">
+      <p>© 2026 Krishna Priya Automobiles. Luxury Dealership in Jubilee Hills, Hyderabad.</p>
+    </div>
+  </footer>
+  <script src="js/vehicle_images.js"></script>
+  <script src="js/vehicles.js"></script>
+  <script src="js/viewer360.js"></script>
+  <script src="js/calculator.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/assistant.js"></script>
+</body>
+</html>

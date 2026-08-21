@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="3D Customizer Studio & Car Builder - Krishna Priya Automobiles Jubilee Hills Hyderabad. Build your dream car, choose paint, trim, alloys, interior & download instant quotation.">
+  <title>3D Customizer Studio & Car Builder | Krishna Priya Automobiles</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+  <!-- Preloader -->
+  <div class="preloader" id="preloader">
+    <div class="preloader-spinner">
+      <div class="spinner-ring"></div>
+      <span class="preloader-text">Krishna Priya Automobiles</span>
+    </div>
+  </div>
+
+  <!-- Header Navbar -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-icon">🏎️</span>
+        <div class="logo-text">
+          <span class="logo-name">Krishna Priya</span>
+          <span class="logo-tagline">AUTOMOBILES</span>
+        </div>
+      </a>
+      <nav class="nav-menu" id="navMenu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="vehicles.html" class="nav-link">Vehicles</a>
+        <a href="configurator.html" class="nav-link active">3D Studio</a>
+        <a href="compare.html" class="nav-link">Compare</a>
+        <a href="offers.html" class="nav-link">Festive Offers</a>
+        <a href="tradein.html" class="nav-link">Trade-In</a>
+        <a href="services.html" class="nav-link">Services & EMI</a>
+        <a href="vip-lounge.html" class="nav-link">VIP Lounge</a>
+        <a href="testimonials.html" class="nav-link">Stories</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light theme">
+          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+        </button>
+        <a href="vehicles.html" class="btn btn-primary nav-cta">Browse Inventory</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle mobile menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main style="padding-top: 110px; padding-bottom: 80px;">
+    <div class="container">
+      <!-- Studio Header -->
+      <div style="text-align: center; max-width: 800px; margin: 0 auto 2.5rem auto;">
+        <span class="badge-360" style="margin-bottom:0.75rem; display:inline-block;">INTERACTIVE VEHICLE DESIGNER</span>
+        <h1 style="font-size: clamp(2.2rem, 4vw, 3.5rem); font-weight: 800; line-height: 1.1; margin-bottom: 1rem;">Build Your Dream Luxury Vehicle</h1>
+        <p style="font-size: 1.1rem; color: var(--clr-text-muted);">Customize trims, exterior paints, alloy wheels, interior upholstery, and high-tech options with live real-time price updates.</p>
+      </div>
+
+      <!-- Configurator Studio Workspace -->
+      <div class="configurator-workspace">
+        <!-- Left: Interactive Canvas Showcase -->
+        <div>
+          <div class="configurator-preview-card">
+            <span class="badge-360" style="position:absolute; top:20px; left:20px;">LIVE STUDIO STUDIO</span>
+            <img id="configuratorCarImage" class="car-display-canvas" src="images/car_creta.jpg" alt="Selected Car">
+
+            <div style="text-align:center; margin-top:1.5rem;">
+              <h2 id="configuratorCarName" style="font-size:1.8rem; font-weight:800; margin-bottom:0.2rem;">Hyundai Creta</h2>
+              <p id="configuratorCarTagline" style="font-size:0.9rem; color:var(--clr-text-muted);">Hyundai • 2024 • SUV • Petrol</p>
+            </div>
+
+            <!-- Color Swatches -->
+            <div style="margin-top:1.5rem; text-align:center;">
+              <span style="font-size:0.8rem; font-weight:700; color:var(--clr-text-muted); text-transform:uppercase;">Select Exterior Paint</span>
+              <div class="color-swatch-group" id="colorSwatchesContainer" style="justify-content:center;"></div>
+            </div>
+          </div>
+
+          <!-- Price & EMI Summary Box -->
+          <div style="margin-top:1.5rem; background:var(--clr-surface); border:1px solid var(--clr-border); border-radius:var(--radius-lg); padding:1.75rem; box-shadow:var(--shadow-md);">
+            <div style="font-size:0.85rem; font-weight:700; color:var(--clr-gold); text-transform:uppercase; letter-spacing:0.05em; margin-bottom:0.75rem;">LIVE PRICING BREAKDOWN</div>
+            
+            <div style="display:flex; flex-direction:column; gap:0.6rem; font-size:0.92rem;">
+              <div style="display:flex; justify-content:space-between;"><span>Base Vehicle Price:</span><strong id="summaryBasePrice">₹12,50,000</strong></div>
+              <div style="display:flex; justify-content:space-between;"><span>Trim Package:</span><strong id="summaryTrimPrice">Included</strong></div>
+              <div style="display:flex; justify-content:space-between;"><span>Alloy Wheels:</span><strong id="summaryWheelPrice">Included</strong></div>
+              <div style="display:flex; justify-content:space-between;"><span>Accessories & Options:</span><strong id="summaryAddonsPrice">None</strong></div>
+            </div>
+
+            <div style="border-top:1px solid var(--clr-border); margin-top:1rem; padding-top:1rem; display:flex; justify-content:space-between; align-items:center;">
+              <div>
+                <div style="font-size:0.8rem; color:var(--clr-text-muted);">Total Customized Price</div>
+                <div id="summaryTotalPrice" style="font-size:1.75rem; font-weight:800; color:var(--clr-gold);">₹12,50,000</div>
+              </div>
+              <div style="text-align:right;">
+                <div style="font-size:0.8rem; color:var(--clr-text-muted);">Est. Monthly EMI</div>
+                <div id="summaryTotalEMI" style="font-size:1.2rem; font-weight:800; color:var(--clr-blue-light);">₹19,850/mo</div>
+              </div>
+            </div>
+
+            <div style="margin-top:1.25rem; display:flex; gap:1rem; flex-wrap:wrap;">
+              <button onclick="saveConfigurationQuote()" class="btn btn-gold" style="flex:1;">📄 Save & Download Quotation</button>
+              <a href="vip-lounge.html" class="btn btn-primary" style="flex:1;">📅 Book Test Drive of This Build</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Studio Controls -->
+        <div>
+          <!-- Step 1: Select Model -->
+          <div style="margin-bottom:1.5rem;">
+            <label style="display:block; font-weight:800; font-size:1rem; margin-bottom:0.5rem;">1. Select Base Vehicle Model</label>
+            <select id="modelSelect" class="form-control" style="width:100%; padding:0.85rem 1.25rem; border-radius:var(--radius-md); border:1px solid var(--clr-border); background:var(--clr-surface); color:var(--clr-text); font-weight:700; font-size:1rem;">
+            </select>
+          </div>
+
+          <!-- Step 2: Trim Selection -->
+          <div style="margin-bottom:1.5rem;">
+            <label style="display:block; font-weight:800; font-size:1rem; margin-bottom:0.75rem;">2. Select Trim Package</label>
+            
+            <div class="option-select-card trim-card active" onclick="selectTrim('Base Elegance', 0)">
+              <div>
+                <strong style="font-size:1rem;">Base Elegance Trim</strong>
+                <p style="font-size:0.8rem; color:var(--clr-text-muted);">Standard luxury package, touchscreen infotainment, push button start</p>
+              </div>
+              <div style="font-weight:800; color:var(--clr-green);">Included</div>
+            </div>
+
+            <div class="option-select-card trim-card" onclick="selectTrim('Sport Dynamic', 120000)">
+              <div>
+                <strong style="font-size:1rem;">Sport Dynamic Edition</strong>
+                <p style="font-size:0.8rem; color:var(--clr-text-muted);">Sport body kit, red brake calipers, paddle shifters, sport bucket seats</p>
+              </div>
+              <div style="font-weight:800; color:var(--clr-gold);">+₹1,20,000</div>
+            </div>
+
+            <div class="option-select-card trim-card" onclick="selectTrim('Luxury Lounge Executive', 250000)">
+              <div>
+                <strong style="font-size:1rem;">Luxury Lounge Executive</strong>
+                <p style="font-size:0.8rem; color:var(--clr-text-muted);">Nappa leather seats, Bose 3D surround audio, ventilated front seats</p>
+              </div>
+              <div style="font-weight:800; color:var(--clr-gold);">+₹2,50,000</div>
+            </div>
+          </div>
+
+          <!-- Step 3: Exterior Features -->
+          <div style="margin-bottom:1.5rem;">
+            <label style="display:block; font-weight:800; font-size:1rem; margin-bottom:0.75rem;">3. Exterior Finishes & Roof</label>
+            <div class="option-select-card" style="cursor:default;">
+              <div style="display:flex; align-items:center; gap:0.75rem;">
+                <input type="checkbox" id="dualToneCheck" onchange="toggleDualToneRoof(this)" style="width:18px; height:18px; cursor:pointer;">
+                <label for="dualToneCheck" style="cursor:pointer; font-weight:700;">Contrast Phantom Black Dual-Tone Roof</label>
+              </div>
+              <div style="font-weight:800; color:var(--clr-gold);">+₹25,000</div>
+            </div>
+          </div>
+
+          <!-- Step 4: Alloy Wheels -->
+          <div style="margin-bottom:1.5rem;">
+            <label style="display:block; font-weight:800; font-size:1rem; margin-bottom:0.75rem;">4. Alloy Wheel Style</label>
+            
+            <div class="option-select-card wheel-card active" onclick="selectWheels('17 Diamond Cut', 0)">
+              <div>
+                <strong>17" Diamond Cut Alloys</strong>
+                <p style="font-size:0.8rem; color:var(--clr-text-muted);">Standard multi-spoke precision alloys</p>
+              </div>
+              <div style="font-weight:800; color:var(--clr-green);">Included</div>
+            </div>
+
+            <div class="option-select-card wheel-card" onclick="selectWheels('18 Gloss Black Sport', 45000)">
+              <div>
+                <strong>18" Gloss Black Sport Alloys</strong>
+                <p style="font-size:0.8rem; color:var(--clr-text-muted);">Aggressive dark finish sport alloys</p>
+              </div>
+              <div style="font-weight:800; color:var(--clr-gold);">+₹45,000</div>
+            </div>
+          </div>
+
+          <!-- Step 5: Technology Packages -->
+          <div>
+            <label style="display:block; font-weight:800; font-size:1rem; margin-bottom:0.75rem;">5. Optional Tech Packages</label>
+
+            <div class="option-select-card" onclick="toggleAddon('Panoramic Skyroof Package', 60000, this)">
+              <div>
+                <strong>Panoramic Sunroof & Ambient Mood Light</strong>
+                <p style="font-size:0.8rem; color:var(--clr-text-muted);">Voice assisted glass skyroof + 64 color cabin lighting</p>
+              </div>
+              <div style="font-weight:800; color:var(--clr-gold);">+₹60,000</div>
+            </div>
+
+            <div class="option-select-card" onclick="toggleAddon('ADAS Autonomous Tech', 95000, this)">
+              <div>
+                <strong>ADAS Level 2 Autonomous Safety Pack</strong>
+                <p style="font-size:0.8rem; color:var(--clr-text-muted);">Adaptive cruise, emergency braking & blind spot camera</p>
+              </div>
+              <div style="font-weight:800; color:var(--clr-gold);">+₹95,000</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo" style="margin-bottom:1rem; display:inline-flex;">
+            <span class="logo-icon">🏎️</span>
+            <div class="logo-text">
+              <span class="logo-name">Krishna Priya</span>
+              <span class="logo-tagline">AUTOMOBILES</span>
+            </div>
+          </a>
+          <p style="color:var(--clr-text-muted); font-size:0.9rem; margin-bottom:1.5rem;">Hyderabad's premier luxury showroom offering 150-point certified SUVs, sedans, electric vehicles, doorstep test drives, and instant trade-in appraisals.</p>
+        </div>
+        <div>
+          <h4 style="margin-bottom:1rem; font-weight:800; color:var(--clr-gold);">Explore Pages</h4>
+          <ul style="display:flex; flex-direction:column; gap:0.6rem; font-size:0.9rem;">
+            <li><a href="vehicles.html">Vehicle Catalog</a></li>
+            <li><a href="configurator.html">Customizer Studio</a></li>
+            <li><a href="compare.html">Side-by-Side Compare</a></li>
+            <li><a href="tradein.html">Trade-In Valuation</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 style="margin-bottom:1rem; font-weight:800; color:var(--clr-gold);">Luxury Concierge</h4>
+          <ul style="display:flex; flex-direction:column; gap:0.6rem; font-size:0.9rem;">
+            <li><a href="vip-lounge.html">VIP Doorstep Test Drive</a></li>
+            <li><a href="services.html">EMI Calculator</a></li>
+            <li><a href="testimonials.html">Customer Stories</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+      <div style="border-top:1px solid var(--clr-border); margin-top:3rem; padding-top:1.5rem; text-align:center; font-size:0.85rem; color:var(--clr-text-muted);">
+        © 2026 Krishna Priya Automobiles. All rights reserved. Jubilee Hills, Hyderabad.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/vehicle_images.js"></script>
+  <script src="js/vehicles.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/assistant.js"></script>
+  <script src="js/configurator.js"></script>
+</body>
+</html>

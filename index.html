@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Krishna Priya Automobiles - Premier Luxury Car Showroom in Jubilee Hills, Hyderabad. Discover luxury SUVs, sedans, electric vehicles with 360° interactive views, instant financing, and trade-in exchange.">
+  <title>Krishna Priya Automobiles | Premier Luxury Car Showroom in Hyderabad</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+  <!-- Preloader -->
+  <div class="preloader" id="preloader">
+    <div class="preloader-spinner">
+      <div class="spinner-ring"></div>
+      <span class="preloader-text">Krishna Priya Automobiles</span>
+    </div>
+  </div>
+
+  <!-- Glassmorphism Navbar -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-icon">🏎️</span>
+        <div class="logo-text">
+          <span class="logo-name">Krishna Priya</span>
+          <span class="logo-tagline">AUTOMOBILES</span>
+        </div>
+      </a>
+      <nav class="nav-menu" id="navMenu">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="vehicles.html" class="nav-link">Vehicles</a>
+        <a href="configurator.html" class="nav-link">3D Studio</a>
+        <a href="compare.html" class="nav-link">Compare</a>
+        <a href="offers.html" class="nav-link">Festive Offers</a>
+        <a href="tradein.html" class="nav-link">Trade-In</a>
+        <a href="services.html" class="nav-link">Services & EMI</a>
+        <a href="vip-lounge.html" class="nav-link">VIP Lounge</a>
+        <a href="testimonials.html" class="nav-link">Stories</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light theme">
+          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+        </button>
+        <a href="vehicles.html" class="btn btn-primary nav-cta">Browse Inventory</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle mobile menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Slider -->
+    <section class="hero" id="hero">
+      <div class="hero-slider" id="heroSlider">
+        <div class="hero-slider-track" id="heroTrack">
+          <div class="hero-slide active" style="background-image: url('images/car_creta.jpg');">
+            <div class="hero-content">
+              <span class="badge-360" style="margin-bottom:0.75rem; display:inline-block;">PREMIUM AUTOMOBILE SHOWROOM</span>
+              <h1 class="hero-title">Experience Unmatched Driving Excellence</h1>
+              <p class="hero-subtitle">Discover our handpicked collection of luxury SUVs, sedans, and electric automobiles with instant home delivery and 360° interactive view.</p>
+              <div class="hero-cta">
+                <a href="vehicles.html" class="btn btn-primary btn-lg">Explore Inventory</a>
+                <button onclick="open360Viewer(1)" class="btn btn-gold btn-lg">360° Experience</button>
+              </div>
+            </div>
+          </div>
+          <div class="hero-slide" style="background-image: url('images/car_xuv700.jpg');">
+            <div class="hero-content">
+              <span class="badge-360" style="margin-bottom:0.75rem; display:inline-block;">150-POINT CERTIFIED COLLECTION</span>
+              <h1 class="hero-title">Flagship SUVs & Performance Vehicles</h1>
+              <p class="hero-subtitle">Certified 150-point quality inspected vehicles with complete peace of mind, doorstep test drives, and 1-year warranty coverage.</p>
+              <div class="hero-cta">
+                <a href="vehicles.html" class="btn btn-primary btn-lg">View Luxury SUVs</a>
+                <a href="contact.html" class="btn btn-outline btn-lg" style="color:#fff; border-color:rgba(255,255,255,0.4);">Schedule Test Drive</a>
+              </div>
+            </div>
+          </div>
+          <div class="hero-slide" style="background-image: url('images/car_nexon_ev.jpg');">
+            <div class="hero-content">
+              <span class="badge-360" style="margin-bottom:0.75rem; display:inline-block;">FESTIVE CELEBRATION DEALS</span>
+              <h1 class="hero-title">Exclusive Savings & Low Interest Rates</h1>
+              <p class="hero-subtitle">Save up to ₹1,50,000 this season with zero down-payment options, 7.99% interest loans, and instant approvals.</p>
+              <div class="hero-cta">
+                <a href="offers.html" class="btn btn-gold btn-lg">View Festive Offers</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="hero-prev" id="heroPrev" aria-label="Previous slide">❮</button>
+      <button class="hero-next" id="heroNext" aria-label="Next slide">❯</button>
+      <div class="hero-dots" id="heroDots"></div>
+    </section>
+
+    <!-- Stats Counter Banner -->
+    <section class="stats-banner">
+      <div class="container">
+        <div class="grid grid-4">
+          <div class="stat-card">
+            <div class="stat-number">5,000+</div>
+            <div class="stat-label">Happy Car Buyers</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">150+</div>
+            <div class="stat-label">Point Inspection Checklist</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">12+</div>
+            <div class="stat-label">Years Showroom Legacy</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">100%</div>
+            <div class="stat-label">Verified Paperwork & RC</div>
+          </div>
+        </div>
+      </div>
+    <!-- Interactive Digital Portals Showcase -->
+    <section class="section" style="background:var(--clr-bg-alt); padding:4rem 0;">
+      <div class="container">
+        <div class="section-header" style="text-align:center; max-width:750px; margin:0 auto 2.5rem auto;">
+          <span class="badge-360" style="margin-bottom:0.6rem; display:inline-block;">NEW DIGITAL SHOWROOM PORTALS</span>
+          <h2 class="section-title">Interactive Luxury Features</h2>
+          <p class="section-subtitle">Experience our next-generation digital automotive suite designed for modern luxury buyers</p>
+        </div>
+
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:1.5rem;">
+          <div class="card" style="padding:2rem; border-top:4px solid var(--clr-gold);">
+            <div style="font-size:2.2rem; margin-bottom:1rem;">🎨</div>
+            <h3 style="font-size:1.2rem; font-weight:800; margin-bottom:0.5rem;">3D Customizer Studio</h3>
+            <p style="font-size:0.88rem; color:var(--clr-text-muted); margin-bottom:1.25rem;">Build your dream vehicle with live exterior paint shifts, alloy styles, interior upholstery, and instant quotation generator.</p>
+            <a href="configurator.html" class="btn btn-gold btn-sm" style="width:100%;">Launch Studio Studio</a>
+          </div>
+
+          <div class="card" style="padding:2rem; border-top:4px solid var(--clr-blue);">
+            <div style="font-size:2.2rem; margin-bottom:1rem;">⚔️</div>
+            <h3 style="font-size:1.2rem; font-weight:800; margin-bottom:0.5rem;">Side-by-Side Compare</h3>
+            <p style="font-size:0.88rem; color:var(--clr-text-muted); margin-bottom:1.25rem;">Compare engine displacement, power (PS), 0-100 acceleration, safety NCAP ratings, and monthly EMI for up to 3 vehicles.</p>
+            <a href="compare.html" class="btn btn-primary btn-sm" style="width:100%;">Compare Vehicles</a>
+          </div>
+
+          <div class="card" style="padding:2rem; border-top:4px solid var(--clr-green);">
+            <div style="font-size:2.2rem; margin-bottom:1rem;">🔄</div>
+            <h3 style="font-size:1.2rem; font-weight:800; margin-bottom:0.5rem;">Instant Trade-In Valuation</h3>
+            <p style="font-size:0.88rem; color:var(--clr-text-muted); margin-bottom:1.25rem;">Estimate your old car exchange value in 60 seconds with our algorithmic valuation model + ₹50,000 festive bonus.</p>
+            <a href="tradein.html" class="btn btn-outline btn-sm" style="width:100%;">Calculate Trade-In</a>
+          </div>
+
+          <div class="card" style="padding:2rem; border-top:4px solid #7f00ff;">
+            <div style="font-size:2.2rem; margin-bottom:1rem;">📅</div>
+            <h3 style="font-size:1.2rem; font-weight:800; margin-bottom:0.5rem;">VIP Concierge Lounge</h3>
+            <p style="font-size:0.88rem; color:var(--clr-text-muted); margin-bottom:1.25rem;">Request a white-glove doorstep test drive at your residence or office with digital VIP pass generation.</p>
+            <a href="vip-lounge.html" class="btn btn-outline btn-sm" style="width:100%;">Book VIP Drive</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Inventory Category Showcase -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Featured Showroom Inventory</h2>
+          <p class="section-subtitle">Top rated automobiles available for immediate home delivery and test drive in Jubilee Hills, Hyderabad</p>
+        </div>
+
+        <!-- Category Tabs -->
+        <div class="category-tabs">
+          <button class="category-tab active" data-category="All">All Categories</button>
+          <button class="category-tab" data-category="SUV">Luxury SUVs</button>
+          <button class="category-tab" data-category="EV">Electric / EV</button>
+          <button class="category-tab" data-category="Sedan">Sedans</button>
+          <button class="category-tab" data-category="MPV">Family MPVs</button>
+        </div>
+
+        <div class="grid grid-3" id="featuredGrid">
+          <!-- Populated dynamically via main.js and vehicles.js -->
+        </div>
+
+        <div style="text-align: center; margin-top: 3rem;">
+          <a href="vehicles.html" class="btn btn-primary btn-lg">View All 12+ Luxury Inventory Cars &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trade-In Old Car Valuation Widget -->
+    <section class="section bg-alt">
+      <div class="container">
+        <div class="grid grid-2" style="align-items:center; gap:3rem;">
+          <div>
+            <span class="badge-360" style="color:var(--clr-gold);">INSTANT CAR EXCHANGE</span>
+            <h2 style="font-size:clamp(2rem, 3.5vw, 2.75rem); margin: 0.5rem 0 1rem;">Upgrade Your Old Car in 3 Easy Steps</h2>
+            <p style="color:var(--clr-text-muted); font-size:1.05rem; line-height:1.7; margin-bottom:1.5rem;">
+              Get the highest market trade-in valuation for your existing car plus an additional <strong>₹60,000 Festive Exchange Bonus</strong> towards any new car at Krishna Priya Automobiles.
+            </p>
+            <div style="display:flex; flex-direction:column; gap:1rem;">
+              <div style="display:flex; align-items:flex-start; gap:1rem;">
+                <div style="width:36px; height:36px; border-radius:50%; background:var(--clr-blue); color:#fff; display:flex; align-items:center; justify-content:center; font-weight:700;">1</div>
+                <div>
+                  <h4 style="font-size:1.1rem; margin-bottom:0.2rem;">Calculate Estimated Value</h4>
+                  <p style="font-size:0.88rem; color:var(--clr-text-muted);">Select your manufacturing year, brand, and kilometer range below.</p>
+                </div>
+              </div>
+              <div style="display:flex; align-items:flex-start; gap:1rem;">
+                <div style="width:36px; height:36px; border-radius:50%; background:var(--clr-gold); color:#0f172a; display:flex; align-items:center; justify-content:center; font-weight:700;">2</div>
+                <div>
+                  <h4 style="font-size:1.1rem; margin-bottom:0.2rem;">Free Doorstep Inspection</h4>
+                  <p style="font-size:0.88rem; color:var(--clr-text-muted);">Our certified technician evaluates your car right at your home in Hyderabad.</p>
+                </div>
+              </div>
+              <div style="display:flex; align-items:flex-start; gap:1rem;">
+                <div style="width:36px; height:36px; border-radius:50%; background:var(--clr-green); color:#fff; display:flex; align-items:center; justify-content:center; font-weight:700;">3</div>
+                <div>
+                  <h4 style="font-size:1.1rem; margin-bottom:0.2rem;">Same-Day Payout & RC Transfer</h4>
+                  <p style="font-size:0.88rem; color:var(--clr-text-muted);">Drive home your new vehicle with zero hassle and instant bank transfer.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card" style="padding:2rem;">
+            <h3 style="font-size:1.35rem; margin-bottom:1.25rem;">Instant Trade-In Calculator</h3>
+            <form id="tradeInForm">
+              <div style="margin-bottom:1rem;">
+                <label style="display:block; font-size:0.85rem; font-weight:600; margin-bottom:0.3rem;">Manufacturing Year</label>
+                <select id="tiYear" class="filter-select" required>
+                  <option value="2022">2022</option>
+                  <option value="2021">2021</option>
+                  <option value="2020">2020</option>
+                  <option value="2019">2019</option>
+                  <option value="2018" selected>2018</option>
+                  <option value="2017">2017</option>
+                  <option value="2016">2016 or older</option>
+                </select>
+              </div>
+
+              <div style="margin-bottom:1rem;">
+                <label style="display:block; font-size:0.85rem; font-weight:600; margin-bottom:0.3rem;">Car Brand</label>
+                <select id="tiBrand" class="filter-select" required>
+                  <option value="Maruti Suzuki">Maruti Suzuki</option>
+                  <option value="Hyundai">Hyundai</option>
+                  <option value="Tata">Tata</option>
+                  <option value="Mahindra">Mahindra</option>
+                  <option value="Honda">Honda</option>
+                  <option value="Toyota">Toyota</option>
+                  <option value="Kia">Kia</option>
+                </select>
+              </div>
+
+              <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-bottom:1.5rem;">
+                <div>
+                  <label style="display:block; font-size:0.85rem; font-weight:600; margin-bottom:0.3rem;">KM Driven</label>
+                  <input type="number" id="tiKm" class="filter-input" placeholder="e.g. 45000" value="45000" required>
+                </div>
+                <div>
+                  <label style="display:block; font-size:0.85rem; font-weight:600; margin-bottom:0.3rem;">Vehicle Condition</label>
+                  <select id="tiCondition" class="filter-select" required>
+                    <option value="Excellent">Excellent</option>
+                    <option value="Good" selected>Good</option>
+                    <option value="Fair">Fair</option>
+                  </select>
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn-gold" style="width:100%;">Calculate My Trade-In Value</button>
+            </form>
+
+            <div id="tradeInResult" style="display:none;"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us / Trust Building Certificate Section -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">The Krishna Priya Trust Guarantee</h2>
+          <p class="section-subtitle">Built on 12+ years of transparency, customer satisfaction, and uncompromising quality standards</p>
+        </div>
+
+        <div class="grid grid-4">
+          <div class="card" style="padding:2rem; text-align:center;">
+            <div style="font-size:3rem; margin-bottom:1rem;">🛡️</div>
+            <h3 style="font-size:1.25rem; margin-bottom:0.5rem;">150-Point Quality Inspection</h3>
+            <p style="color:var(--clr-text-muted); font-size:0.88rem;">Comprehensive mechanical, structural, and computer OBD scan on every vehicle by certified experts.</p>
+          </div>
+
+          <div class="card" style="padding:2rem; text-align:center;">
+            <div style="font-size:3rem; margin-bottom:1rem;">🔄</div>
+            <h3 style="font-size:1.25rem; margin-bottom:0.5rem;">7-Day Money Back Guarantee</h3>
+            <p style="color:var(--clr-text-muted); font-size:0.88rem;">Drive with total peace of mind. If you are not 100% satisfied, return your car within 7 days for a full refund.</p>
+          </div>
+
+          <div class="card" style="padding:2rem; text-align:center;">
+            <div style="font-size:3rem; margin-bottom:1rem;">🚚</div>
+            <h3 style="font-size:1.25rem; margin-bottom:0.5rem;">Doorstep Test Drive & Delivery</h3>
+            <p style="color:var(--clr-text-muted); font-size:0.88rem;">We bring your selected car right to your home or workplace anywhere in Hyderabad and Telangana.</p>
+          </div>
+
+          <div class="card" style="padding:2rem; text-align:center;">
+            <div style="font-size:3rem; margin-bottom:1rem;">📜</div>
+            <h3 style="font-size:1.25rem; margin-bottom:0.5rem;">1-Year Extended Warranty</h3>
+            <p style="color:var(--clr-text-muted); font-size:0.88rem;">Complimentary 12-month engine & transmission warranty plus 24x7 pan-India roadside assistance.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Redesigned Executive Founder & CEO Leadership Showcase -->
+    <section class="executive-section">
+      <div class="container">
+        <div class="executive-grid">
+          <div class="executive-image-wrap">
+            <div class="executive-img-box">
+              <img src="images/founder_ceo.jpg" alt="Krishna Priya - Founder & CEO" loading="lazy">
+            </div>
+            <div class="executive-badge-floating">FOUNDER & CEO</div>
+          </div>
+
+          <div class="executive-content">
+            <div class="executive-header">
+              <span class="executive-header-sub">EXECUTIVE LEADERSHIP</span>
+              <h2 class="executive-header-title">Uncompromising Quality & Executive Integrity</h2>
+            </div>
+
+            <div class="executive-quote-card">
+              <p class="executive-quote-text">
+                "At Krishna Priya Automobiles, every luxury automobile handed over to our client represents our unwavering pledge of diagnostic perfection, transparent history, and personalized executive care."
+              </p>
+              <div class="executive-meta">
+                <div>
+                  <div class="executive-name">Krishna Priya</div>
+                  <div class="executive-role">Founder & Chief Executive Officer</div>
+                </div>
+                <span class="badge-360" style="background:rgba(37,99,235,0.1); color:var(--clr-blue); border-color:rgba(37,99,235,0.3);">Jubilee Hills Flagship</span>
+              </div>
+            </div>
+
+            <div class="executive-stats-pills">
+              <div class="executive-pill">
+                <span class="executive-pill-icon">🏆</span>
+                <span>12+ Years Showroom Legacy</span>
+              </div>
+              <div class="executive-pill">
+                <span class="executive-pill-icon">🚘</span>
+                <span>5,000+ Delivered Luxury Cars</span>
+              </div>
+              <div class="executive-pill">
+                <span class="executive-pill-icon">⭐</span>
+                <span>4.9★ Verified Buyer Rating</span>
+              </div>
+            </div>
+
+            <div style="margin-top:0.5rem; display:flex; gap:1rem; flex-wrap:wrap;">
+              <a href="about.html" class="btn btn-gold">Read Full Founder Story & Vision &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Customer Testimonials & Verified Reviews Section -->
+    <section class="section bg-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge-360" style="color:var(--clr-gold);">4.9 ★ GOOGLE RATING (500+ REVIEWS)</span>
+          <h2 class="section-title">What Our Customers Say</h2>
+          <p class="section-subtitle">Real experiences from luxury car owners who trusted Krishna Priya Automobiles in Hyderabad</p>
+        </div>
+
+        <div class="grid grid-3">
+          <div class="testimonial-card">
+            <div class="star-rating">★★★★★</div>
+            <p class="testimonial-text">"Bought my Hyundai Creta 2024 from Krishna Priya Automobiles. The 360° interactive view on their website made my decision so easy. Delivered right to my house in Jubilee Hills in pristine condition!"</p>
+            <div class="testimonial-user">
+              <div class="user-avatar">SR</div>
+              <div class="user-info">
+                <h4>Dr. Suresh Reddy</h4>
+                <p>Purchased Hyundai Creta • Jubilee Hills</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="star-rating">★★★★★</div>
+            <p class="testimonial-text">"Extremely transparent pricing! The trade-in estimator gave me ₹50,000 more for my old Swift than any other dealership. Loan approval took under 2 hours. Highly recommended!"</p>
+            <div class="testimonial-user">
+              <div class="user-avatar">AP</div>
+              <div class="user-info">
+                <h4>Ananya Rao</h4>
+                <p>Purchased Tata Nexon EV • Gachibowli</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="star-rating">★★★★★</div>
+            <p class="testimonial-text">"World class showroom experience! The 150-point inspection certificate gave me full confidence in buying my Mahindra XUV700. Founder Krishna Priya personally ensured a memorable vehicle handover."</p>
+            <div class="testimonial-user">
+              <div class="user-avatar">VK</div>
+              <div class="user-info">
+                <h4>Vikram Kulkarni</h4>
+                <p>Purchased XUV700 • Madhapur</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="text-align:center; margin-top:2.5rem;">
+          <button onclick="document.getElementById('writeReviewModal').style.display='flex';" class="btn btn-gold">✍️ Write a Customer Review</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Interactive Write a Review Modal -->
+  <div class="modal-backdrop" id="writeReviewModal" style="display:none;">
+    <div class="modal-container" style="max-width: 500px;">
+      <div class="modal-header">
+        <h3 class="modal-title">Share Your Experience</h3>
+        <span class="modal-close" onclick="document.getElementById('writeReviewModal').style.display='none';">&times;</span>
+      </div>
+      <form id="reviewForm">
+        <div style="margin-bottom:1rem;">
+          <label style="display:block; font-size:0.85rem; font-weight:600; margin-bottom:0.3rem;">Your Name</label>
+          <input type="text" class="filter-input" placeholder="Full name" required>
+        </div>
+        <div style="margin-bottom:1rem;">
+          <label style="display:block; font-size:0.85rem; font-weight:600; margin-bottom:0.3rem;">Car Model Purchased</label>
+          <input type="text" class="filter-input" placeholder="e.g. Creta, Nexon EV, XUV700" required>
+        </div>
+        <div style="margin-bottom:1rem;">
+          <label style="display:block; font-size:0.85rem; font-weight:600; margin-bottom:0.3rem;">Star Rating</label>
+          <select class="filter-select" required>
+            <option value="5">★★★★★ (5 Stars - Outstanding)</option>
+            <option value="4">★★★★☆ (4 Stars - Excellent)</option>
+            <option value="3">★★★☆☆ (3 Stars - Average)</option>
+          </select>
+        </div>
+        <div style="margin-bottom:1.5rem;">
+          <label style="display:block; font-size:0.85rem; font-weight:600; margin-bottom:0.3rem;">Your Feedback</label>
+          <textarea class="filter-input" rows="4" placeholder="Tell us about your showroom & delivery experience..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:100%;">Submit Review</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Floating WhatsApp & Chat Popover Widget -->
+  <div class="wa-widget">
+    <div class="wa-fab" id="waFabToggle">
+      💬
+      <span class="wa-badge-pulse"></span>
+    </div>
+    <div class="wa-chat-card" id="waChatCard">
+      <div class="wa-chat-header">
+        <div>
+          <div class="wa-chat-header-title">Krishna Priya Desk</div>
+          <div class="wa-chat-header-sub"><span class="online-dot"></span> Online | Replies instantly</div>
+        </div>
+        <span style="cursor:pointer; font-size:1.4rem;" id="waChatClose">&times;</span>
+      </div>
+      <div class="wa-chat-body">
+        <div class="wa-chat-bubble">
+          👋 Welcome to Krishna Priya Automobiles! Looking to buy a car, book a test drive, or check loan options?
+        </div>
+        <a href="https://wa.me/919876543210?text=Hi!%20I%20am%20visiting%20your%20website%20and%20would%20like%20to%20enquire%20about%20your%20luxury%20car%20inventory." target="_blank" rel="noopener" class="wa-chat-btn">
+          <span>Chat on WhatsApp</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 360 Viewer Modal Placeholder -->
+  <div class="modal-backdrop" id="modal360">
+    <div class="modal-360-container">
+      <div class="modal-360-header">
+        <div>
+          <span class="badge-360">360° INTERACTIVE VIEW</span>
+          <h3 class="modal-360-title" id="viewer360Title">Hyundai Creta 2024</h3>
+          <p class="modal-360-sub" id="viewer360Sub">Drag left/right to rotate 360° exterior view</p>
+        </div>
+        <span class="modal-360-close" id="close360Modal">&times;</span>
+      </div>
+      <div class="modal-360-view-tabs">
+        <span class="view-tab active" id="tabExterior">Exterior 360°</span>
+        <span class="view-tab" id="tabInterior">Interior Cockpit</span>
+      </div>
+      <div class="modal-360-canvas-wrap" id="canvasWrap">
+        <div class="glow-backdrop" id="glowBackdrop"></div>
+        <div class="vehicle-360-stage" id="stage360">
+          <img src="images/car_creta.jpg" alt="360 view" class="vehicle-360-img" id="img360">
+        </div>
+        <span class="canvas-angle-indicator" id="angleIndicator">0°</span>
+        <div class="drag-hint" id="dragHint"><span>↔️ Drag to Rotate 360°</span></div>
+      </div>
+      <div class="modal-360-footer">
+        <div class="color-picker-wrap">
+          <span class="color-label">Color:</span>
+          <div class="color-swatches" id="colorSwatches"></div>
+        </div>
+        <div style="display:flex; gap:0.6rem;">
+          <a href="contact.html" class="btn btn-primary btn-sm">Book Doorstep Test Drive</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Vehicle Detail Modal -->
+  <div class="modal-backdrop" id="vehicleDetailModal">
+    <div class="modal-container" style="max-width: 900px;">
+      <div class="modal-header">
+        <h3 class="modal-title">Vehicle Specifications</h3>
+        <span class="modal-close" id="closeDetailModal">&times;</span>
+      </div>
+      <div class="modal-body" id="vehicleDetailBody"></div>
+    </div>
+  </div>
+
+  <!-- Rich Showroom Footer -->
+  <footer style="background: var(--clr-surface-elevated); border-top: 1px solid var(--clr-border); padding: 4rem 0 2rem; color: var(--clr-text-muted); font-size: 0.9rem;">
+    <div class="container">
+      <div class="grid grid-4" style="gap:2.5rem; margin-bottom:3rem;">
+        <div>
+          <a href="index.html" class="nav-logo" style="margin-bottom:1rem; display:inline-flex;">
+            <span class="logo-icon">🏎️</span>
+            <div class="logo-text">
+              <span class="logo-name">Krishna Priya</span>
+              <span class="logo-tagline">AUTOMOBILES</span>
+            </div>
+          </a>
+          <p style="line-height:1.6; margin-bottom:1rem;">Hyderabad's premier luxury automobile dealership located in Jubilee Hills. Offering 150-point certified SUVs, sedans, EVs, instant financing, and trade-in exchange.</p>
+          <div style="display:flex; gap:0.8rem; font-size:1.2rem;">
+            <span>📍 Road No. 36, Jubilee Hills</span>
+          </div>
+        </div>
+
+        <div>
+          <h4 style="color:var(--clr-text); font-size:1.1rem; margin-bottom:1.2rem;">Quick Links</h4>
+          <ul style="display:flex; flex-direction:column; gap:0.6rem;">
+            <li><a href="index.html">Showroom Home</a></li>
+            <li><a href="vehicles.html">Vehicle Inventory (12+ Cars)</a></li>
+            <li><a href="offers.html">Festive Deals & Vouchers</a></li>
+            <li><a href="services.html">Services & EMI Loan Calculator</a></li>
+            <li><a href="about.html">Our Leadership & Vision</a></li>
+            <li><a href="contact.html">Book Doorstep Test Drive</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 style="color:var(--clr-text); font-size:1.1rem; margin-bottom:1.2rem;">Operating Hours</h4>
+          <div style="display:flex; justify-content:space-between; margin-bottom:0.5rem; border-bottom:1px solid var(--clr-border); padding-bottom:0.4rem;">
+            <span>Mon - Sat:</span>
+            <strong style="color:var(--clr-text);">9:30 AM - 8:30 PM</strong>
+          </div>
+          <div style="display:flex; justify-content:space-between; margin-bottom:1rem; border-bottom:1px solid var(--clr-border); padding-bottom:0.4rem;">
+            <span>Sunday:</span>
+            <strong style="color:var(--clr-gold);">10:00 AM - 6:00 PM</strong>
+          </div>
+          <p style="font-size:0.82rem; color:var(--clr-green); font-weight:600;">✓ Open All 7 Days For Test Drives</p>
+        </div>
+
+        <div>
+          <h4 style="color:var(--clr-text); font-size:1.1rem; margin-bottom:1.2rem;">Showroom Contact</h4>
+          <p style="margin-bottom:0.5rem;">📞 Sales Hotline: <strong style="color:var(--clr-text);">+91 98765 43210</strong></p>
+          <p style="margin-bottom:0.5rem;">📞 Desk Landline: <strong style="color:var(--clr-text);">040 2345 6789</strong></p>
+          <p style="margin-bottom:1rem;">✉️ Email: <strong style="color:var(--clr-text);">sales@krishnapriyaauto.com</strong></p>
+          <span class="badge-360" style="background:var(--clr-gold); color:#000;">ISO 9001:2026 CERTIFIED DEALERSHIP</span>
+        </div>
+      </div>
+
+      <div style="border-top:1px solid var(--clr-border); padding-top:2rem; text-align:center; font-size:0.85rem;">
+        <p>© 2026 Krishna Priya Automobiles. All Rights Reserved. Jubilee Hills, Hyderabad, Telangana 500033.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="js/vehicle_images.js"></script>
+  <script src="js/vehicles.js"></script>
+  <script src="js/viewer360.js"></script>
+  <script src="js/calculator.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/assistant.js"></script>
+</body>
+</html>

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Us & Book VIP Doorstep Test Drive | Krishna Priya Automobiles Jubilee Hills Hyderabad">
+  <title>Contact Us & Book Test Drive | Krishna Priya Automobiles</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+  <!-- Preloader -->
+  <div class="preloader" id="preloader">
+    <div class="preloader-spinner">
+      <div class="spinner-ring"></div>
+      <span class="preloader-text">Krishna Priya Automobiles</span>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-icon">🏎️</span>
+        <div class="logo-text">
+          <span class="logo-name">Krishna Priya</span>
+          <span class="logo-tagline">AUTOMOBILES</span>
+        </div>
+      </a>
+      <nav class="nav-menu" id="navMenu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="vehicles.html" class="nav-link">Vehicles</a>
+        <a href="configurator.html" class="nav-link">Studio Studio</a>
+        <a href="compare.html" class="nav-link">Compare</a>
+        <a href="offers.html" class="nav-link">Festive Offers</a>
+        <a href="tradein.html" class="nav-link">Trade-In</a>
+        <a href="services.html" class="nav-link">Services & EMI</a>
+        <a href="vip-lounge.html" class="nav-link">VIP Lounge</a>
+        <a href="testimonials.html" class="nav-link">Stories</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link active">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+        </button>
+        <a href="vehicles.html" class="btn btn-primary nav-cta">View Vehicles</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main style="padding-top: 5.5rem;">
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge-360" style="color:var(--clr-gold);">VIP CAR HOSPITALITY</span>
+          <h1 class="section-title">Schedule a Test Drive or Visit Us</h1>
+          <p class="section-subtitle">Experience your favorite automobile firsthand with optional doorstep delivery in Hyderabad</p>
+        </div>
+
+        <div class="grid grid-2" style="gap:3rem; align-items:start;">
+          <!-- Test Drive Form Card -->
+          <div class="card" style="padding:2.5rem;">
+            <h2 style="font-size:1.6rem; margin-bottom:1.25rem;">Book VIP Test Drive Slot</h2>
+            <form id="testDriveForm" onsubmit="handleTestDriveSubmit(event)">
+              <div style="margin-bottom:1.2rem;">
+                <label style="display:block; font-size:0.85rem; font-weight:600; margin-bottom:0.3rem;">Full Name *</label>
+                <input type="text" id="tdName" class="filter-input" placeholder="Enter full name" required>
+              </div>
+
+              <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-bottom:1.2rem;">
+                <div>
+                  <label style="display:block; font-size:0.85rem; font-weight:600; margin-bottom:0.3rem;">Email Address *</label>
+                  <input type="email" id="tdEmail" class="filter-input" placeholder="name@domain.com" required>
+                </div>
+                <div>
+                  <label style="display:block; font-size:0.85rem; font-weight:600; margin-bottom:0.3rem;">Mobile Number *</label>
+                  <input type="tel" id="tdPhone" class="filter-input" placeholder="10-digit mobile number" required pattern="[0-9]{10}">
+                </div>
+              </div>
+
+              <div style="margin-bottom:1.2rem;">
+                <label style="display:block; font-size:0.85rem; font-weight:600; margin-bottom:0.3rem;">Select Car Model *</label>
+                <select id="tdVehicle" class="filter-select" required>
+                  <option value="">Select Vehicle Model</option>
+                  <option>Hyundai Creta</option>
+                  <option>Tata Nexon EV</option>
+                  <option>Mahindra XUV700</option>
+                  <option>Honda City</option>
+                  <option>Kia Seltos</option>
+                  <option>Tata Harrier</option>
+                  <option>Mahindra Scorpio N</option>
+                  <option>Toyota Innova Hycross</option>
+                  <option>Maruti Suzuki Swift</option>
+                  <option>Hyundai Tucson</option>
+                  <option>BMW 3 Series Gran Limousine</option>
+                </select>
+              </div>
+
+              <div style="margin-bottom:1.2rem;">
+                <label style="display:block; font-size:0.85rem; font-weight:600; margin-bottom:0.3rem;">Test Drive Location Preference *</label>
+                <select id="tdLocation" class="filter-select" required>
+                  <option value="Showroom">At Showroom (Road No. 36, Jubilee Hills)</option>
+                  <option value="Doorstep">Doorstep Test Drive (At My Home / Office Address)</option>
+                </select>
+              </div>
+
+              <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-bottom:1.5rem;">
+                <div>
+                  <label style="display:block; font-size:0.85rem; font-weight:600; margin-bottom:0.3rem;">Preferred Date *</label>
+                  <input type="date" id="tdDate" class="filter-input" required>
+                </div>
+                <div>
+                  <label style="display:block; font-size:0.85rem; font-weight:600; margin-bottom:0.3rem;">Preferred Time Slot *</label>
+                  <select id="tdTime" class="filter-select" required>
+                    <option value="">Select Time Slot</option>
+                    <option>10:00 AM - 12:00 PM</option>
+                    <option>12:00 PM - 02:00 PM</option>
+                    <option>02:00 PM - 04:00 PM</option>
+                    <option>04:00 PM - 06:00 PM</option>
+                  </select>
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-lg" style="width:100%;">Confirm Test Drive Slot</button>
+            </form>
+          </div>
+
+          <!-- Contact Details Card -->
+          <div>
+            <div class="card" style="padding:2.5rem; margin-bottom:2rem;">
+              <h2 style="font-size:1.6rem; margin-bottom:1.5rem;">Showroom Headquarters</h2>
+              
+              <div style="display:flex; gap:1.2rem; margin-bottom:1.5rem; align-items:flex-start;">
+                <div style="font-size:1.8rem; background:var(--clr-bg-alt); padding:0.6rem; border-radius:var(--radius-md);">📍</div>
+                <div>
+                  <h4 style="font-size:1.1rem; margin-bottom:0.2rem;">Location Address</h4>
+                  <p style="color:var(--clr-text-muted); font-size:0.92rem; line-height:1.6;">
+                    Road No. 36, Beside Metro Station,<br>Jubilee Hills, Hyderabad, Telangana 500033
+                  </p>
+                </div>
+              </div>
+
+              <div style="display:flex; gap:1.2rem; margin-bottom:1.5rem; align-items:flex-start;">
+                <div style="font-size:1.8rem; background:var(--clr-bg-alt); padding:0.6rem; border-radius:var(--radius-md);">📞</div>
+                <div>
+                  <h4 style="font-size:1.1rem; margin-bottom:0.2rem;">Sales Phone Desk</h4>
+                  <p style="color:var(--clr-text-muted); font-size:0.92rem;">
+                    +91 98765 43210 / +91 040 2345 6789
+                  </p>
+                </div>
+              </div>
+
+              <div style="display:flex; gap:1.2rem; align-items:flex-start;">
+                <div style="font-size:1.8rem; background:var(--clr-bg-alt); padding:0.6rem; border-radius:var(--radius-md);">✉️</div>
+                <div>
+                  <h4 style="font-size:1.1rem; margin-bottom:0.2rem;">Email Inquiries</h4>
+                  <p style="color:var(--clr-text-muted); font-size:0.92rem;">
+                    sales@krishnapriyaauto.com
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Operating Hours Card -->
+            <div class="card" style="padding:2rem;">
+              <h3 style="font-size:1.25rem; margin-bottom:0.75rem;">Showroom Working Hours</h3>
+              <div style="display:flex; justify-content:space-between; padding:0.5rem 0; border-bottom:1px solid var(--clr-border); font-size:0.9rem;">
+                <span>Monday - Saturday:</span>
+                <strong style="color:var(--clr-text);">9:30 AM - 8:30 PM</strong>
+              </div>
+              <div style="display:flex; justify-content:space-between; padding:0.5rem 0; font-size:0.9rem;">
+                <span>Sunday:</span>
+                <strong style="color:var(--clr-gold);">10:00 AM - 6:00 PM</strong>
+              </div>
+              <div style="margin-top:1rem; padding-top:0.5rem; text-align:center;">
+                <span class="badge-360" style="background:var(--clr-green); color:#fff;">✓ Doorstep Test Drives Available All 7 Days</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Test Drive Success Modal -->
+  <div class="modal-backdrop" id="testDriveSuccessModal" style="display:none;">
+    <div class="modal-container" style="max-width: 450px; text-align: center; padding: 2.5rem 2rem;">
+      <span style="font-size: 4rem; display:block; margin-bottom:1rem;">🎉</span>
+      <h2 style="font-size:1.75rem; margin-bottom:0.5rem;">Test Drive Slot Booked!</h2>
+      <p style="color:var(--clr-text-muted); font-size:0.95rem; margin-bottom:1.75rem;">
+        Thank you for booking with Krishna Priya Automobiles. Our executive will call you within 30 minutes to confirm your scheduled slot.
+      </p>
+      <button onclick="document.getElementById('testDriveSuccessModal').style.display='none';" class="btn btn-primary btn-lg" style="width:100%;">Done</button>
+    </div>
+  </div>
+
+  <!-- Floating WhatsApp Widget -->
+  <div class="wa-widget">
+    <div class="wa-fab" id="waFabToggle">
+      💬
+      <span class="wa-badge-pulse"></span>
+    </div>
+    <div class="wa-chat-card" id="waChatCard">
+      <div class="wa-chat-header">
+        <div>
+          <div class="wa-chat-header-title">Krishna Priya VIP Support</div>
+          <div class="wa-chat-header-sub"><span class="online-dot"></span> Online | Book via WhatsApp</div>
+        </div>
+        <span style="cursor:pointer; font-size:1.4rem;" id="waChatClose">&times;</span>
+      </div>
+      <div class="wa-chat-body">
+        <div class="wa-chat-bubble">
+          👋 Prefer booking your test drive over WhatsApp? Send us your preferred date and model directly!
+        </div>
+        <a href="https://wa.me/919876543210?text=Hi!%20I%20would%20like%20to%20book%20a%20test%20drive%20for%20a%20car." target="_blank" rel="noopener" class="wa-chat-btn">
+          <span>Chat on WhatsApp</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <footer style="background: var(--clr-surface-elevated); border-top: 1px solid var(--clr-border); padding: 3rem 0; text-align: center; font-size:0.9rem; color: var(--clr-text-muted);">
+    <div class="container">
+      <p>© 2026 Krishna Priya Automobiles. Jubilee Hills, Hyderabad.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    function handleTestDriveSubmit(e) {
+      e.preventDefault();
+      document.getElementById('testDriveSuccessModal').style.display = 'flex';
+      if (typeof window.showToast === 'function') {
+        window.showToast('Test drive booking confirmed!', 'success');
+      }
+      document.getElementById('testDriveForm').reset();
+    }
+  </script>
+  <script src="js/vehicle_images.js"></script>
+  <script src="js/vehicles.js"></script>
+  <script src="js/forms.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/assistant.js"></script>
+</body>
+</html>

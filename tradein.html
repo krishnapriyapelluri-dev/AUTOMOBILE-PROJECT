@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Instant Old Car Valuation & Trade-In Exchange Portal - Krishna Priya Automobiles Jubilee Hills Hyderabad. Get instant AI car appraisal & ₹50,000 exchange bonus.">
+  <title>Trade-In Valuation & Exchange Portal | Krishna Priya Automobiles</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+  <!-- Preloader -->
+  <div class="preloader" id="preloader">
+    <div class="preloader-spinner">
+      <div class="spinner-ring"></div>
+      <span class="preloader-text">Krishna Priya Automobiles</span>
+    </div>
+  </div>
+
+  <!-- Header Navbar -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-icon">🏎️</span>
+        <div class="logo-text">
+          <span class="logo-name">Krishna Priya</span>
+          <span class="logo-tagline">AUTOMOBILES</span>
+        </div>
+      </a>
+      <nav class="nav-menu" id="navMenu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="vehicles.html" class="nav-link">Vehicles</a>
+        <a href="configurator.html" class="nav-link">3D Studio</a>
+        <a href="compare.html" class="nav-link">Compare</a>
+        <a href="offers.html" class="nav-link">Festive Offers</a>
+        <a href="tradein.html" class="nav-link active">Trade-In</a>
+        <a href="services.html" class="nav-link">Services & EMI</a>
+        <a href="vip-lounge.html" class="nav-link">VIP Lounge</a>
+        <a href="testimonials.html" class="nav-link">Stories</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light theme">
+          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+        </button>
+        <a href="vehicles.html" class="btn btn-primary nav-cta">Browse Inventory</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle mobile menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main style="padding-top: 110px; padding-bottom: 80px;">
+    <div class="container" style="max-width: 900px;">
+      <!-- Hero Header -->
+      <div style="text-align: center; margin-bottom: 2.5rem;">
+        <span class="badge-360" style="margin-bottom:0.75rem; display:inline-block;">INSTANT AI CAR APPRAISAL</span>
+        <h1 style="font-size: clamp(2.2rem, 4vw, 3.5rem); font-weight: 800; line-height: 1.1; margin-bottom: 1rem;">Exchange Your Car for Maximum Value</h1>
+        <p style="font-size: 1.1rem; color: var(--clr-text-muted);">Get an algorithmic market estimate in 60 seconds + ₹50,000 festive trade-in bonus toward your new luxury vehicle.</p>
+      </div>
+
+      <!-- Step Wizard Progress Indicator -->
+      <div class="wizard-steps-indicator">
+        <div class="step-node active">
+          <div class="step-number">1</div>
+          <span style="font-size:0.8rem; font-weight:700;">Vehicle Specs</span>
+        </div>
+        <div class="step-node">
+          <div class="step-number">2</div>
+          <span style="font-size:0.8rem; font-weight:700;">Condition</span>
+        </div>
+        <div class="step-node">
+          <div class="step-number">3</div>
+          <span style="font-size:0.8rem; font-weight:700;">AI Valuation</span>
+        </div>
+        <div class="step-node">
+          <div class="step-number">4</div>
+          <span style="font-size:0.8rem; font-weight:700;">Upgrade Match</span>
+        </div>
+      </div>
+
+      <!-- Wizard Step 1: Vehicle Specs -->
+      <div id="tradeStep1" class="wizard-step-content" style="background:var(--clr-surface); border:1px solid var(--clr-border); border-radius:var(--radius-lg); padding:2rem; box-shadow:var(--shadow-md);">
+        <h3 style="font-weight:800; margin-bottom:1.5rem;">Step 1: Tell Us About Your Current Vehicle</h3>
+        
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:1.25rem;">
+          <div>
+            <label style="display:block; font-size:0.88rem; font-weight:700; margin-bottom:0.3rem;">Car Brand / Manufacturer</label>
+            <select id="tradeBrand" class="form-control" style="width:100%; padding:0.75rem 1rem; border-radius:var(--radius-md); border:1px solid var(--clr-border); background:var(--clr-bg); color:var(--clr-text);">
+              <option value="Hyundai">Hyundai</option>
+              <option value="Maruti Suzuki">Maruti Suzuki</option>
+              <option value="Tata">Tata</option>
+              <option value="Mahindra">Mahindra</option>
+              <option value="Honda">Honda</option>
+              <option value="Toyota">Toyota</option>
+              <option value="BMW">BMW / Mercedes / Luxury</option>
+            </select>
+          </div>
+
+          <div>
+            <label style="display:block; font-size:0.88rem; font-weight:700; margin-bottom:0.3rem;">Registration Year</label>
+            <select id="tradeYear" class="form-control" style="width:100%; padding:0.75rem 1rem; border-radius:var(--radius-md); border:1px solid var(--clr-border); background:var(--clr-bg); color:var(--clr-text);">
+              <option value="2023">2023</option>
+              <option value="2022">2022</option>
+              <option value="2021">2021</option>
+              <option value="2020" selected>2020</option>
+              <option value="2019">2019</option>
+              <option value="2018">2018</option>
+              <option value="2017">2017 or earlier</option>
+            </select>
+          </div>
+
+          <div>
+            <label style="display:block; font-size:0.88rem; font-weight:700; margin-bottom:0.3rem;">Kilometers Driven</label>
+            <input type="number" id="tradeKms" value="45000" class="form-control" style="width:100%; padding:0.75rem 1rem; border-radius:var(--radius-md); border:1px solid var(--clr-border); background:var(--clr-bg); color:var(--clr-text);">
+          </div>
+
+          <div>
+            <label style="display:block; font-size:0.88rem; font-weight:700; margin-bottom:0.3rem;">Fuel Type</label>
+            <select id="tradeFuel" class="form-control" style="width:100%; padding:0.75rem 1rem; border-radius:var(--radius-md); border:1px solid var(--clr-border); background:var(--clr-bg); color:var(--clr-text);">
+              <option value="Petrol">Petrol</option>
+              <option value="Diesel">Diesel</option>
+              <option value="CNG">CNG</option>
+              <option value="Electric">Electric</option>
+            </select>
+          </div>
+        </div>
+
+        <div style="margin-top:2rem; text-align:right;">
+          <button onclick="nextTradeInStep(2)" class="btn btn-gold btn-lg">Proceed to Condition Assessment ➔</button>
+        </div>
+      </div>
+
+      <!-- Wizard Step 2: Mechanical Condition -->
+      <div id="tradeStep2" class="wizard-step-content" style="display:none; background:var(--clr-surface); border:1px solid var(--clr-border); border-radius:var(--radius-lg); padding:2rem; box-shadow:var(--shadow-md);">
+        <h3 style="font-weight:800; margin-bottom:1.5rem;">Step 2: Vehicle Condition & Maintenance History</h3>
+        
+        <div style="margin-bottom:1.5rem;">
+          <label style="display:block; font-weight:700; font-size:0.9rem; margin-bottom:0.75rem;">Overall Body & Mechanical Condition</label>
+          <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:1rem;">
+            <label style="background:var(--clr-bg); border:1px solid var(--clr-border); border-radius:var(--radius-md); padding:1rem; cursor:pointer; text-align:center;">
+              <input type="radio" name="tradeCond" value="Excellent">
+              <strong style="display:block; margin-top:0.3rem; color:var(--clr-green);">Excellent</strong>
+              <span style="font-size:0.78rem; color:var(--clr-text-muted);">No scratches, full service history</span>
+            </label>
+            <label style="background:var(--clr-bg); border:1px solid var(--clr-border); border-radius:var(--radius-md); padding:1rem; cursor:pointer; text-align:center;">
+              <input type="radio" name="tradeCond" value="Good" checked>
+              <strong style="display:block; margin-top:0.3rem; color:var(--clr-blue-light);">Good</strong>
+              <span style="font-size:0.78rem; color:var(--clr-text-muted);">Minor wear, regularly serviced</span>
+            </label>
+            <label style="background:var(--clr-bg); border:1px solid var(--clr-border); border-radius:var(--radius-md); padding:1rem; cursor:pointer; text-align:center;">
+              <input type="radio" name="tradeCond" value="Fair">
+              <strong style="display:block; margin-top:0.3rem; color:var(--clr-gold);">Fair</strong>
+              <span style="font-size:0.78rem; color:var(--clr-text-muted);">Needs minor body/mechanical touchup</span>
+            </label>
+          </div>
+        </div>
+
+        <div style="display:flex; justify-style:space-between; margin-top:2rem;">
+          <button onclick="prevTradeInStep(1)" class="btn btn-outline">❮ Back</button>
+          <button onclick="nextTradeInStep(3)" class="btn btn-gold btn-lg">Calculate Valuation ➔</button>
+        </div>
+      </div>
+
+      <!-- Wizard Step 3: Instant Valuation Output -->
+      <div id="tradeStep3" class="wizard-step-content" style="display:none; background:var(--clr-surface); border:1px solid var(--clr-border); border-radius:var(--radius-lg); padding:2rem; box-shadow:var(--shadow-md);">
+        <div style="text-align:center; padding:1rem 0;">
+          <span style="font-size:3rem;">💎</span>
+          <h2 style="font-weight:800; font-size:1.8rem; margin-bottom:0.3rem;">Estimated Fair Trade-In Range</h2>
+          <div id="tradeValuationRange" style="font-size:2.4rem; font-weight:900; color:var(--clr-gold); font-family:var(--font-heading);">₹5,20,000 - ₹5,80,000</div>
+          
+          <div style="margin-top:1rem; display:inline-block; padding:0.6rem 1.5rem; background:rgba(16,185,129,0.15); border:1px solid rgba(16,185,129,0.3); border-radius:var(--radius-pill); font-weight:700; color:var(--clr-green);">
+            🎁 Includes +₹50,000 Festive Exchange Bonus! Total Value: <span id="tradeBonusValuation">₹6,25,000</span>
+          </div>
+        </div>
+
+        <div style="display:flex; justify-content:space-between; margin-top:2.5rem;">
+          <button onclick="prevTradeInStep(2)" class="btn btn-outline">❮ Re-Assess</button>
+          <button onclick="nextTradeInStep(4)" class="btn btn-primary btn-lg">Match Upgrade & Schedule Drive ➔</button>
+        </div>
+      </div>
+
+      <!-- Wizard Step 4: Upgrade Matcher & Booking -->
+      <div id="tradeStep4" class="wizard-step-content" style="display:none; background:var(--clr-surface); border:1px solid var(--clr-border); border-radius:var(--radius-lg); padding:2rem; box-shadow:var(--shadow-md);">
+        <h3 style="font-weight:800; margin-bottom:1.5rem;">Step 4: Select Your Target New Car & Doorstep Inspection</h3>
+
+        <div style="margin-bottom:1.5rem;">
+          <label style="display:block; font-weight:800; font-size:0.95rem; margin-bottom:0.4rem;">Select New Car to Upgrade To:</label>
+          <select id="targetUpgradeCar" class="form-control" style="width:100%; padding:0.85rem 1.25rem; border-radius:var(--radius-md); border:1px solid var(--clr-border); background:var(--clr-bg); color:var(--clr-text); font-weight:700;">
+          </select>
+        </div>
+
+        <!-- Net Calculation Card -->
+        <div style="background:var(--clr-bg-alt); border:1px solid var(--clr-border); border-radius:var(--radius-md); padding:1.5rem; margin-bottom:2rem;">
+          <div style="display:flex; justify-content:space-between; margin-bottom:0.5rem;"><span>New Vehicle Price:</span><strong id="upgradeNewPrice">₹12,50,000</strong></div>
+          <div style="display:flex; justify-content:space-between; margin-bottom:0.5rem; color:var(--clr-green);"><span>Less Old Car Trade-In:</span><strong id="upgradeTradeValue">-₹5,50,000</strong></div>
+          <div style="border-top:1px solid var(--clr-border); margin-top:0.75rem; padding-top:0.75rem; display:flex; justify-content:space-between; align-items:center;">
+            <div>
+              <div style="font-size:0.8rem; color:var(--clr-text-muted);">Net Upgrade Payable Amount</div>
+              <div id="upgradeNetPayable" style="font-size:1.8rem; font-weight:900; color:var(--clr-gold);">₹7,00,000</div>
+            </div>
+            <div style="text-align:right;">
+              <div style="font-size:0.8rem; color:var(--clr-text-muted);">Estimated New EMI</div>
+              <div id="upgradeNetEMI" style="font-size:1.25rem; font-weight:800; color:var(--clr-blue-light);">₹11,100/mo</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Doorstep Inspection Booking Form -->
+        <form onsubmit="bookDoorstepInspection(event)">
+          <h4 style="font-weight:800; margin-bottom:1rem;">Book Free Doorstep Physical Verification</h4>
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-bottom:1.5rem;">
+            <input type="text" placeholder="Your Name" required class="form-control" style="padding:0.75rem 1rem; border-radius:var(--radius-md); border:1px solid var(--clr-border); background:var(--clr-bg);">
+            <input type="tel" placeholder="Mobile Number" required class="form-control" style="padding:0.75rem 1rem; border-radius:var(--radius-md); border:1px solid var(--clr-border); background:var(--clr-bg);">
+            <input type="text" placeholder="Doorstep Address in Hyderabad" required class="form-control" style="grid-column:1/-1; padding:0.75rem 1rem; border-radius:var(--radius-md); border:1px solid var(--clr-border); background:var(--clr-bg);">
+          </div>
+          <button type="submit" class="btn btn-gold btn-lg" style="width:100%;">Schedule Physical Inspection & Doorstep Delivery</button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo" style="margin-bottom:1rem; display:inline-flex;">
+            <span class="logo-icon">🏎️</span>
+            <div class="logo-text">
+              <span class="logo-name">Krishna Priya</span>
+              <span class="logo-tagline">AUTOMOBILES</span>
+            </div>
+          </a>
+          <p style="color:var(--clr-text-muted); font-size:0.9rem;">Premier luxury car showroom in Jubilee Hills Hyderabad.</p>
+        </div>
+        <div>
+          <h4 style="margin-bottom:1rem; font-weight:800; color:var(--clr-gold);">Quick Links</h4>
+          <ul style="display:flex; flex-direction:column; gap:0.6rem; font-size:0.9rem;">
+            <li><a href="vehicles.html">Vehicles</a></li>
+            <li><a href="configurator.html">Customizer Studio</a></li>
+            <li><a href="compare.html">Compare</a></li>
+            <li><a href="tradein.html">Trade-In</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 style="margin-bottom:1rem; font-weight:800; color:var(--clr-gold);">Services</h4>
+          <ul style="display:flex; flex-direction:column; gap:0.6rem; font-size:0.9rem;">
+            <li><a href="vip-lounge.html">VIP Test Drive</a></li>
+            <li><a href="services.html">Services & EMI</a></li>
+            <li><a href="testimonials.html">Stories</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div style="border-top:1px solid var(--clr-border); margin-top:3rem; padding-top:1.5rem; text-align:center; font-size:0.85rem; color:var(--clr-text-muted);">
+        © 2026 Krishna Priya Automobiles. Jubilee Hills, Hyderabad.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/vehicle_images.js"></script>
+  <script src="js/vehicles.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/assistant.js"></script>
+  <script src="js/tradein.js"></script>
+</body>
+</html>

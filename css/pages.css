@@ -1,0 +1,351 @@
+/* ==========================================================================
+   Krishna Priya Automobiles - Page Layout Styles
+   ========================================================================== */
+
+/* ==========================================================================
+   Hero Section
+   ========================================================================== */
+.hero {
+  position: relative;
+  height: 90vh;
+  min-height: 600px;
+  max-height: 850px;
+  overflow: hidden;
+  background: #090d16;
+}
+
+.hero-slider {
+  width: 100%;
+  height: 100%;
+}
+
+.hero-slider-track {
+  display: flex;
+  height: 100%;
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hero-slide {
+  min-width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover !important;
+  background-position: center !important;
+}
+
+.hero-slide::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(9, 13, 22, 0.4) 0%, rgba(9, 13, 22, 0.85) 100%),
+              radial-gradient(circle at center, transparent 0%, rgba(9, 13, 22, 0.6) 100%);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 850px;
+  padding: 0 1.5rem;
+  color: #ffffff;
+}
+
+.hero-title {
+  font-size: clamp(2.5rem, 5.5vw, 4.25rem);
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 1.25rem;
+  color: #ffffff;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  letter-spacing: -0.03em;
+}
+
+.hero-subtitle {
+  font-size: clamp(1.1rem, 2vw, 1.35rem);
+  opacity: 0.9;
+  margin-bottom: 2.25rem;
+  max-width: 680px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 1.25rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.hero-prev, .hero-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(10px);
+  transition: var(--transition);
+}
+
+.hero-prev { left: 2rem; }
+.hero-next { right: 2rem; }
+
+.hero-prev:hover, .hero-next:hover {
+  background: var(--clr-blue);
+  border-color: var(--clr-blue);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.hero-dots {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  display: flex;
+  gap: 0.6rem;
+}
+
+.hero-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.hero-dot.active {
+  width: 32px;
+  border-radius: 10px;
+  background: var(--clr-gold);
+}
+
+/* ==========================================================================
+   Stats Counter Banner
+   ========================================================================== */
+.stats-banner {
+  background: var(--clr-surface-elevated);
+  border-top: 1px solid var(--clr-border);
+  border-bottom: 1px solid var(--clr-border);
+  padding: 3rem 0;
+}
+
+.stat-card {
+  text-align: center;
+  padding: 1rem;
+}
+
+.stat-number {
+  font-family: var(--font-heading);
+  font-size: clamp(2.2rem, 3.5vw, 3.2rem);
+  font-weight: 800;
+  color: var(--clr-blue);
+  line-height: 1;
+  margin-bottom: 0.4rem;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--clr-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* ==========================================================================
+   Filter & Toolbar Bar
+   ========================================================================== */
+.filter-toolbar {
+  background: var(--clr-surface);
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  margin-bottom: 2.5rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.filter-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.filter-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--clr-text-muted);
+}
+
+.filter-select, .filter-input {
+  background: var(--clr-bg-alt);
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius-sm);
+  padding: 0.65rem 0.9rem;
+  color: var(--clr-text);
+  font-size: 0.9rem;
+  transition: var(--transition);
+  width: 100%;
+}
+
+.filter-select:focus, .filter-input:focus {
+  border-color: var(--clr-blue);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+/* ==========================================================================
+   EMI Loan Calculator Section
+   ========================================================================== */
+.calculator-card {
+  background: var(--clr-surface);
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  box-shadow: var(--shadow-md);
+}
+
+.calc-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+@media (max-width: 900px) {
+  .calc-grid { grid-template-columns: 1fr; }
+}
+
+.slider-group {
+  margin-bottom: 1.5rem;
+}
+
+.slider-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.slider-val {
+  color: var(--clr-blue);
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.range-slider {
+  width: 100%;
+  height: 6px;
+  border-radius: 3px;
+  background: var(--clr-border);
+  outline: none;
+  accent-color: var(--clr-blue);
+}
+
+.calc-result-box {
+  background: var(--clr-bg-alt);
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius-md);
+  padding: 2rem;
+  text-align: center;
+}
+
+.emi-amount-badge {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--clr-blue);
+  font-family: var(--font-heading);
+  margin: 0.5rem 0 1.5rem;
+}
+
+.donut-chart-container {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  margin: 0 auto 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: background 0.3s;
+}
+
+.donut-inner {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background: var(--clr-surface);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--clr-text-muted);
+}
+
+/* ==========================================================================
+   Offers & Deals Section
+   ========================================================================== */
+.offer-hero-banner {
+  background: linear-gradient(135deg, #1e1b4b 0%, #311042 50%, #0f172a 100%);
+  border-radius: var(--radius-lg);
+  padding: 3.5rem 2.5rem;
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  box-shadow: var(--shadow-luxury);
+}
+
+.countdown-timer {
+  display: flex;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.timer-box {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--radius-md);
+  text-align: center;
+  min-width: 75px;
+}
+
+.timer-num {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--clr-gold);
+  line-height: 1;
+}
+
+.timer-lbl {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0.8;
+  margin-top: 4px;
+}

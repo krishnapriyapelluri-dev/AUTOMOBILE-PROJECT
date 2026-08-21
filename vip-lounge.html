@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="VIP Concierge & Doorstep Test Drive Lounge - Krishna Priya Automobiles Jubilee Hills Hyderabad. Book doorstep test drives, VR showroom tours, and executive fleet consultations.">
+  <title>VIP Concierge & Doorstep Test Drive | Krishna Priya Automobiles</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+  <!-- Preloader -->
+  <div class="preloader" id="preloader">
+    <div class="preloader-spinner">
+      <div class="spinner-ring"></div>
+      <span class="preloader-text">Krishna Priya Automobiles</span>
+    </div>
+  </div>
+
+  <!-- Header Navbar -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-icon">🏎️</span>
+        <div class="logo-text">
+          <span class="logo-name">Krishna Priya</span>
+          <span class="logo-tagline">AUTOMOBILES</span>
+        </div>
+      </a>
+      <nav class="nav-menu" id="navMenu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="vehicles.html" class="nav-link">Vehicles</a>
+        <a href="configurator.html" class="nav-link">3D Studio</a>
+        <a href="compare.html" class="nav-link">Compare</a>
+        <a href="offers.html" class="nav-link">Festive Offers</a>
+        <a href="tradein.html" class="nav-link">Trade-In</a>
+        <a href="services.html" class="nav-link">Services & EMI</a>
+        <a href="vip-lounge.html" class="nav-link active">VIP Lounge</a>
+        <a href="testimonials.html" class="nav-link">Stories</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light theme">
+          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+        </button>
+        <a href="vehicles.html" class="btn btn-primary nav-cta">Browse Inventory</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle mobile menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main style="padding-top: 110px; padding-bottom: 80px;">
+    <div class="container">
+      <!-- Hero Header -->
+      <div style="text-align: center; max-width: 800px; margin: 0 auto 3rem auto;">
+        <span class="badge-360" style="margin-bottom:0.75rem; display:inline-block;">WHITE-GLOVE AUTOMOTIVE CONCIERGE</span>
+        <h1 style="font-size: clamp(2.2rem, 4vw, 3.5rem); font-weight: 800; line-height: 1.1; margin-bottom: 1rem;">VIP Executive Lounge & Doorstep Test Drive</h1>
+        <p style="font-size: 1.1rem; color: var(--clr-text-muted);">Experience ultimate luxury convenience. Our automotive concierge brings fully sanitized, fuel-topped demo vehicles straight to your home or office address.</p>
+      </div>
+
+      <!-- Grid layout for VIP Services & Booking Form -->
+      <div style="display:grid; grid-template-columns: 1.2fr 1fr; gap:2.5rem; align-items:start;">
+        <!-- Left: VIP Booking Form -->
+        <div style="background:var(--clr-surface); border:1px solid var(--clr-border); border-radius:var(--radius-xl); padding:2.5rem; box-shadow:var(--shadow-luxury);">
+          <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:1.5rem;">
+            <span style="font-size:1.8rem;">📅</span>
+            <div>
+              <h3 style="font-weight:800; font-size:1.4rem;">Schedule VIP Doorstep Drive</h3>
+              <p style="font-size:0.85rem; color:var(--clr-text-muted);">Instant Digital Pass generated upon booking</p>
+            </div>
+          </div>
+
+          <form onsubmit="handleVIPBooking(event)">
+            <div style="display:flex; flex-direction:column; gap:1.25rem;">
+              <div>
+                <label style="display:block; font-size:0.88rem; font-weight:700; margin-bottom:0.3rem;">Full Name</label>
+                <input type="text" id="vipCustomerName" required placeholder="e.g. Vikramaditya Rao" class="form-control" style="width:100%; padding:0.8rem 1rem; border-radius:var(--radius-md); border:1px solid var(--clr-border); background:var(--clr-bg); color:var(--clr-text);">
+              </div>
+
+              <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
+                <div>
+                  <label style="display:block; font-size:0.88rem; font-weight:700; margin-bottom:0.3rem;">Mobile Number</label>
+                  <input type="tel" id="vipPhone" required placeholder="+91 98765 43210" class="form-control" style="width:100%; padding:0.8rem 1rem; border-radius:var(--radius-md); border:1px solid var(--clr-border); background:var(--clr-bg); color:var(--clr-text);">
+                </div>
+                <div>
+                  <label style="display:block; font-size:0.88rem; font-weight:700; margin-bottom:0.3rem;">Select Vehicle</label>
+                  <select id="vipCarSelect" class="form-control" style="width:100%; padding:0.8rem 1rem; border-radius:var(--radius-md); border:1px solid var(--clr-border); background:var(--clr-bg); color:var(--clr-text); font-weight:700;">
+                  </select>
+                </div>
+              </div>
+
+              <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
+                <div>
+                  <label style="display:block; font-size:0.88rem; font-weight:700; margin-bottom:0.3rem;">Preferred Date</label>
+                  <input type="date" id="vipDriveDate" required class="form-control" style="width:100%; padding:0.8rem 1rem; border-radius:var(--radius-md); border:1px solid var(--clr-border); background:var(--clr-bg); color:var(--clr-text);">
+                </div>
+                <div>
+                  <label style="display:block; font-size:0.88rem; font-weight:700; margin-bottom:0.3rem;">Time Window</label>
+                  <select id="vipTimeSlot" class="form-control" style="width:100%; padding:0.8rem 1rem; border-radius:var(--radius-md); border:1px solid var(--clr-border); background:var(--clr-bg); color:var(--clr-text);">
+                    <option value="10:00 AM - 12:00 PM">Morning (10:00 AM - 12:00 PM)</option>
+                    <option value="02:00 PM - 04:00 PM">Afternoon (02:00 PM - 04:00 PM)</option>
+                    <option value="05:00 PM - 07:00 PM">Evening (05:00 PM - 07:00 PM)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label style="display:block; font-size:0.88rem; font-weight:700; margin-bottom:0.3rem;">Delivery Address (Residence / Office)</label>
+                <input type="text" id="vipLocation" required placeholder="Plot No. 12, Jubilee Hills, Hyderabad" class="form-control" style="width:100%; padding:0.8rem 1rem; border-radius:var(--radius-md); border:1px solid var(--clr-border); background:var(--clr-bg); color:var(--clr-text);">
+              </div>
+
+              <button type="submit" class="btn btn-gold btn-lg" style="margin-top:0.5rem; width:100%;">Generate VIP Test Drive Pass 🎫</button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Right: Concierge Features & Perks -->
+        <div style="display:flex; flex-direction:column; gap:1.5rem;">
+          <div class="card" style="padding:1.75rem; border:1px solid var(--clr-border); border-radius:var(--radius-lg);">
+            <div style="font-size:2rem; margin-bottom:0.75rem;">🏡</div>
+            <h3 style="font-weight:800; font-size:1.2rem; margin-bottom:0.4rem;">Doorstep White-Glove Service</h3>
+            <p style="font-size:0.9rem; color:var(--clr-text-muted);">No need to navigate Jubilee Hills traffic. Our executive arrives at your location with the car, complete specification portfolio, and loan calculator iPad.</p>
+          </div>
+
+          <div class="card" style="padding:1.75rem; border:1px solid var(--clr-border); border-radius:var(--radius-lg);">
+            <div style="font-size:2rem; margin-bottom:0.75rem;">🥽</div>
+            <h3 style="font-weight:800; font-size:1.2rem; margin-bottom:0.4rem;">Virtual VR Showroom Tour</h3>
+            <p style="font-size:0.9rem; color:var(--clr-text-muted);">Can't visit in person? Request an interactive 3D virtual walkthrough where our specialist guides you through interior upholstery options and features live over video.</p>
+          </div>
+
+          <div class="card" style="padding:1.75rem; border:1px solid var(--clr-border); border-radius:var(--radius-lg);">
+            <div style="font-size:2rem; margin-bottom:0.75rem;">🎉</div>
+            <h3 style="font-weight:800; font-size:1.2rem; margin-bottom:0.4rem;">VIP Red Carpet Delivery Unveiling</h3>
+            <p style="font-size:0.9rem; color:var(--clr-text-muted);">Every vehicle purchase includes our signature delivery ceremony with satin ribbon unveiling, celebratory family cake cutting, and framed owner key presentation.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo" style="margin-bottom:1rem; display:inline-flex;">
+            <span class="logo-icon">🏎️</span>
+            <div class="logo-text">
+              <span class="logo-name">Krishna Priya</span>
+              <span class="logo-tagline">AUTOMOBILES</span>
+            </div>
+          </a>
+          <p style="color:var(--clr-text-muted); font-size:0.9rem;">Premier luxury car showroom in Jubilee Hills Hyderabad.</p>
+        </div>
+        <div>
+          <h4 style="margin-bottom:1rem; font-weight:800; color:var(--clr-gold);">Quick Links</h4>
+          <ul style="display:flex; flex-direction:column; gap:0.6rem; font-size:0.9rem;">
+            <li><a href="vehicles.html">Vehicles</a></li>
+            <li><a href="configurator.html">Customizer Studio</a></li>
+            <li><a href="compare.html">Compare</a></li>
+            <li><a href="tradein.html">Trade-In</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 style="margin-bottom:1rem; font-weight:800; color:var(--clr-gold);">Services</h4>
+          <ul style="display:flex; flex-direction:column; gap:0.6rem; font-size:0.9rem;">
+            <li><a href="vip-lounge.html">VIP Test Drive</a></li>
+            <li><a href="services.html">Services & EMI</a></li>
+            <li><a href="testimonials.html">Stories</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div style="border-top:1px solid var(--clr-border); margin-top:3rem; padding-top:1.5rem; text-align:center; font-size:0.85rem; color:var(--clr-text-muted);">
+        © 2026 Krishna Priya Automobiles. Jubilee Hills, Hyderabad.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/vehicle_images.js"></script>
+  <script src="js/vehicles.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/assistant.js"></script>
+  <script src="js/vip.js"></script>
+</body>
+</html>

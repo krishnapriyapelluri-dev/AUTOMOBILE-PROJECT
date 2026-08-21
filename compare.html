@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Side-by-Side Luxury Car Spec Comparison - Krishna Priya Automobiles Jubilee Hills Hyderabad. Compare SUVs, Sedans, EVs power, torque, mileage & EMI.">
+  <title>Side-by-Side Car Comparison | Krishna Priya Automobiles</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+  <!-- Preloader -->
+  <div class="preloader" id="preloader">
+    <div class="preloader-spinner">
+      <div class="spinner-ring"></div>
+      <span class="preloader-text">Krishna Priya Automobiles</span>
+    </div>
+  </div>
+
+  <!-- Header Navbar -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-icon">🏎️</span>
+        <div class="logo-text">
+          <span class="logo-name">Krishna Priya</span>
+          <span class="logo-tagline">AUTOMOBILES</span>
+        </div>
+      </a>
+      <nav class="nav-menu" id="navMenu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="vehicles.html" class="nav-link">Vehicles</a>
+        <a href="configurator.html" class="nav-link">3D Studio</a>
+        <a href="compare.html" class="nav-link active">Compare</a>
+        <a href="offers.html" class="nav-link">Festive Offers</a>
+        <a href="tradein.html" class="nav-link">Trade-In</a>
+        <a href="services.html" class="nav-link">Services & EMI</a>
+        <a href="vip-lounge.html" class="nav-link">VIP Lounge</a>
+        <a href="testimonials.html" class="nav-link">Stories</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light theme">
+          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+        </button>
+        <a href="vehicles.html" class="btn btn-primary nav-cta">Browse Inventory</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle mobile menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main style="padding-top: 110px; padding-bottom: 80px;">
+    <div class="container">
+      <!-- Page Hero Header -->
+      <div style="text-align: center; max-width: 800px; margin: 0 auto 3rem auto;">
+        <span class="badge-360" style="margin-bottom:0.75rem; display:inline-block;">EXECUTIVE TECHNICAL MATRIX</span>
+        <h1 style="font-size: clamp(2.2rem, 4vw, 3.5rem); font-weight: 800; line-height: 1.1; margin-bottom: 1rem;">Side-by-Side Car Comparison</h1>
+        <p style="font-size: 1.1rem; color: var(--clr-text-muted);">Compare engine displacement, max power (PS), 0-100 acceleration, safety NCAP ratings, boot space, and estimated monthly EMI to make an informed luxury investment.</p>
+      </div>
+
+      <!-- Container where compare matrix renders dynamically -->
+      <div id="compareContainer"></div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo" style="margin-bottom:1rem; display:inline-flex;">
+            <span class="logo-icon">🏎️</span>
+            <div class="logo-text">
+              <span class="logo-name">Krishna Priya</span>
+              <span class="logo-tagline">AUTOMOBILES</span>
+            </div>
+          </a>
+          <p style="color:var(--clr-text-muted); font-size:0.9rem; margin-bottom:1.5rem;">Hyderabad's premier luxury showroom offering 150-point certified SUVs, sedans, electric vehicles, doorstep test drives, and instant trade-in appraisals.</p>
+          <div style="display:flex; gap:0.75rem;">
+            <span class="badge-360">📍 Jubilee Hills, Rd No 36</span>
+            <span class="badge-360">⭐ 4.9 (1,200+ Reviews)</span>
+          </div>
+        </div>
+        <div>
+          <h4 style="margin-bottom:1rem; font-weight:800; color:var(--clr-gold);">Explore Pages</h4>
+          <ul style="display:flex; flex-direction:column; gap:0.6rem; font-size:0.9rem;">
+            <li><a href="vehicles.html">Vehicle Catalog</a></li>
+            <li><a href="configurator.html">Customizer Studio</a></li>
+            <li><a href="compare.html">Side-by-Side Compare</a></li>
+            <li><a href="tradein.html">Trade-In Valuation</a></li>
+            <li><a href="offers.html">Festive Celebration Deals</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 style="margin-bottom:1rem; font-weight:800; color:var(--clr-gold);">Luxury Concierge</h4>
+          <ul style="display:flex; flex-direction:column; gap:0.6rem; font-size:0.9rem;">
+            <li><a href="vip-lounge.html">VIP Doorstep Test Drive</a></li>
+            <li><a href="services.html">EMI & Loan Calculator</a></li>
+            <li><a href="testimonials.html">Customer Stories & Gallery</a></li>
+            <li><a href="about.html">About Krishna Priya</a></li>
+            <li><a href="contact.html">Showroom Location & Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div style="border-top:1px solid var(--clr-border); margin-top:3rem; padding-top:1.5rem; text-align:center; font-size:0.85rem; color:var(--clr-text-muted);">
+        © 2026 Krishna Priya Automobiles. All rights reserved. Jubilee Hills, Hyderabad, Telangana.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/vehicle_images.js"></script>
+  <script src="js/vehicles.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/assistant.js"></script>
+  <script src="js/compare.js"></script>
+</body>
+</html>
